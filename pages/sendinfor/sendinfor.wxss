@@ -1,0 +1,238 @@
+/* pages/sendinfor/sendinfor.wxss */
+.infor{
+  border-top: 22rpx solid #f5f5f5;
+}
+.infor .inforcon{
+  border-bottom: 2rpx solid #f5f5f5;
+  line-height: 90rpx;
+  height: 90rpx;
+  font-size: 24rpx;
+  color: #8f8f8f;
+  position: relative;
+}
+.infor .inforcon icon{
+  color: #e51c23;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  float: left;
+}
+.infor .inforcon text{
+  color: #333;
+  float: left;
+}
+.infor .inforcon input{
+  line-height: 90rpx;
+  height: 90rpx;
+  padding-left: 20rpx
+}
+.plhcolor{
+  color: #d7d7d7;
+}
+.addresscon{
+  float: left;
+  padding-left: 20rpx;
+}
+.infor .inforcon image{
+  width: 40rpx;
+  height: 90rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 4rpx;
+  font-size: 30rpx;
+}
+.save{
+  background: #f5f5f5;
+  color: #8f8f8f;
+  line-height: 76rpx;
+  font-size: 24rpx;
+}
+.save checkbox{
+  float: left;
+  line-height: 70rpx;
+  margin: 0 0rpx 0 20rpx;
+ 
+}
+checkbox .wx-checkbox-input{
+    border-radius: 8rpx;
+    height: 22rpx;
+    width: 22rpx;
+    font-size: 30rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    height: 36rpx;
+    width: 36rpx;
+    font-size: 30rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 40rpx;
+    background-color: #1FD56D;
+    color:white;    
+}
+.inforlist .tit{
+   border-bottom: 4rpx solid #f5f5f5;
+}
+.inforlist text{
+  padding-left: 30rpx;
+  font-size: 24rpx;
+  line-height: 74rpx;
+  color: #999;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.listcon{
+  font-size: 24rpx;
+  color: #333;
+  overflow: hidden;
+  padding: 0 0 86rpx;
+}
+.every-item{
+  overflow: hidden;
+  border-top: 2rpx solid #f5f5f5;
+  padding: 10rpx 0;
+}
+.listcon radio{
+  float:left;
+  margin-left: 20rpx;
+  width: 10%;
+  margin-top: 20rpx;
+  transform:scale(.6)
+}
+.list-infor{
+  float: left;
+  width: 80%;
+  margin: 10rpx;
+}
+.list-infor .name-tel{
+  width:90%;  
+}
+.name-tel view:first-child{
+  float: left
+}
+.name-tel view:last-child{
+  float: right
+}
+.adress{
+  width:90%;
+  clear: both;
+  margin-top: 20rpx;
+}
+button{
+  width: 100%;
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 34rpx;
+  color: #fff;
+  background-color: rgb(255, 152, 0);
+  border: 0;
+  border-color: transparent;
+  z-index: 9999;
+}
+
+/*以下是选择器  */
+.save-btn {
+    width: 90%;
+    height: 80rpx;
+    margin: 0 auto;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #2EA9DF;
+    border-radius: 6rpx;
+    color: #fff;
+}
+
+.save-btn:active {
+    background-color: #369DC9;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.message {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    width: 400rpx;
+    height: 80rpx;
+    margin-left: -200rpx;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30rpx;
+    line-height: 80rpx;
+    color: #fff;
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.area-item {
+    line-height: 40px;
+    text-align: center;
+}
+
+.distpicker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 560rpx;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    font-size:30rpx
+}
+
+.distpicker-btn {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 40rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #fafafa;
+    color: #586C94;
+}
+
+.distpicker-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 560rpx;
+    background-color: #fff;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
