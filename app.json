@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/sendinfor/sendinfor",
+    "pages/index/index",
+      
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "捎带脚●同城",
+    "navigationBarTextStyle": "black"
+  }
+}

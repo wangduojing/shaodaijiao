@@ -1,0 +1,50 @@
+/**app.wxss**/
+/*1-aliIcon star*/
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_810521_691nsq3sz99.eot?t=1535525792978'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_810521_691nsq3sz99.eot?t=1535525792978#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+  url('//at.alicdn.com/t/font_810521_691nsq3sz99.ttf?t=1535525792978') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_810521_691nsq3sz99.svg?t=1535525792978#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;font-size:16px;font-style:normal; -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 使用到的图标在下面写下 */
+.icon-user:before { content: "\ecc8"; color: #d7d7d7; }
+
+.icon-qidian:before { content: "\e60f"; color: #89ca13;}
+
+.icon-zhongdian:before { content: "\e610"; color: #ff9800;}
+
+.icon-bars:before { content: "\e601"; color: #d7d7d7;}
+
+.icon-yezi:before { content: "\e742";color: #1fd56d;}
+
+.icon-bullseye:before { content: "\e83b";  color: #ff9800;}
+
+.icon-yezi-copy:before { content: "\ecc9";  color: #ff9800;}
+
+.icon-xiala:before { content: "\e65c"; color: #d7d7d7;}
+
+.icon-dayuhao:before { content: "\e60b"; color: #888;}
+
+.icon-contact-phone:before { content: "\ee98"; color:#d7d7d7;font-size: 40rpx;}
+
+
+
+/*1-aliIcon end*/
+
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
