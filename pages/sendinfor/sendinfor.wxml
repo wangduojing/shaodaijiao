@@ -1,76 +1,76 @@
 <!--pages/sendinfor/sendinfor.wxml-->
 <form bindsubmit="savePersonInfo">
-  <view class='infor'>
-    <view class='inforcon'>
-      <icon class='iconfont must-infor'>*</icon>
-      <text>姓名 </text> 
-      <input placeholder-class='plhcolor' name="name" value="{{name}}" placeholder='请输入发件人姓名'></input>
-      <image class='iconfont icon-contact-phone' bindtap='getContact'></image>
-    </view>
-    <view class='inforcon'>
-      <icon class='iconfont must-infor'>*</icon>
-      <text>联系方式 </text> 
-      <input type='number' maxlength="11" name="tel" value="{{tel}}"  placeholder-class='plhcolor' placeholder='请输入发件人手机'></input>
-    </view>
-    <view class='inforcon'>
-      <icon class='iconfont must-infor'>*</icon>
-      <text>发件地址 </text> 
-      <view bindtap="showDistpicker">
-        <view class="addresscon input {{!provinceName[provinceSelIndex] ? 'plhcolor' : ''}}">
-            <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}} {{districtName[districtSelIndex]}}</block>
-            <block wx:else>请输入发件人地址</block>
+    <view class='infor'>
+        <view class='inforcon'>
+            <icon class='iconfont must-infor'>*</icon>
+            <text>姓名 </text>
+            <input placeholder-class='plhcolor' name="name" value="{{name}}" placeholder='请输入发件人姓名'></input>
+            <image class='iconfont icon-contact-phone' bindtap='getContact'></image>
         </view>
-        <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden"/>
-        <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden"/>
-        <input type="text" name="district" value="{{districtName[districtSelIndex]}}" class="hidden"/>
-      </view>
-      <image class='iconfont icon-dayuhao'></image>
-    </view>
-    <view class='inforcon last-infor'>
-      <icon class='iconfont must-infor'>*</icon>
-      <text>详细地址 </text> 
-      <input name="address" value='{{address}}' placeholder-class='plhcolor' placeholder='请输入发件人详细地址'></input>
-    </view>
-  </view>
-  <view class='save'>
-    <checkbox class="inforcon" name="default" checked></checkbox>存为常用信息
-  </view>
-  <view class="inforlist">
-    <view class='tit'>
-      <text>常用信息</text>
-      <image class="iconfont icon-xiala" style='width:60rpx;height:30rpx;margin-top:30rpx;float:right' bindtap='showHide'></image>
-    </view>
-    <view class="con {{showView?'show':'hide'}}">
-      <view class='listcon'>
-        <radio-group bindchange='radioChange'>
-        <label wx:for='{{contactList}}'>
-          <view class='every-item'>        
-            <radio value='{{items.name}}' checked='{{items.checked}}'></radio>
-            {{items.value}}
-            <view class='list-infor'>
-              <view class='name-tel'>
-                <view>{{item.pcName}}</view>
-                <view>{{item.pcPhone}}</view>
-              </view>
-              <view class='adress'>
-                {{item.pcAddressNote}}
-              </view>
+        <view class='inforcon'>
+            <icon class='iconfont must-infor'>*</icon>
+            <text>联系方式 </text>
+            <input type='number' maxlength="11" name="tel" value="{{tel}}" placeholder-class='plhcolor' placeholder='请输入发件人手机'></input>
+        </view>
+        <view class='inforcon'>
+            <icon class='iconfont must-infor'>*</icon>
+            <text>发件地址 </text>
+            <view bindtap="showDistpicker">
+                <view class="addresscon input {{!provinceName[provinceSelIndex] ? 'plhcolor' : ''}}">
+                    <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}} {{districtName[districtSelIndex]}}</block>
+                    <block wx:else>请输入发件人地址</block>
+                </view>
+                <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden" />
+                <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden" />
+                <input type="text" name="district" value="{{districtName[districtSelIndex]}}" class="hidden" />
             </view>
-          </view>
-        </label>
-        </radio-group>
-        
-      </view>
+            <image class='iconfont icon-dayuhao'></image>
+        </view>
+        <view class='inforcon last-infor'>
+            <icon class='iconfont must-infor'>*</icon>
+            <text>详细地址 </text>
+            <input name="address" value='{{address}}' placeholder-class='plhcolor' placeholder='请输入发件人详细地址'></input>
+        </view>
     </view>
-  </view>
-  <button formType="submit" bindtap='formbtn'>立即下单</button>
+    <view class='save'>
+        <checkbox class="inforcon" name="default" checked></checkbox>存为常用信息
+    </view>
+    <view class="inforlist">
+        <view class='tit'>
+            <text>常用信息</text>
+            <image class="iconfont icon-xiala" style='width:60rpx;height:30rpx;margin-top:30rpx;float:right' bindtap='showHide'></image>
+        </view>
+        <view class="con {{showView?'show':'hide'}}">
+            <view class='listcon'>
+                <radio-group bindchange='radioChange'>
+                    <label wx:for='{{contactList}}'>
+                        <view class='every-item'>
+                            <radio value='{{item.pcName}}' checked='{{item.checked}}'></radio>
+                            
+                            <view class='list-infor'>
+                                <view class='name-tel'>
+                                    <view>{{item.pcName}}</view>
+                                    <view>{{item.pcPhone}}</view>
+                                </view>
+                                <view class='adress'>
+                                    {{item.pcAddressNote}}
+                                </view>
+                            </view>
+                        </view>
+                    </label>
+                </radio-group>
+
+            </view>
+        </view>
+    </view>
+    <button formType="submit" bindtap='formbtn'>立即下单</button>
 </form>
 
 <view class="distpicker {{showDistpicker ? '' : 'hidden'}}">
     <view class="distpicker-btn">
         <view class="distpicker-cancel-btn" bindtap="distpickerCancel">取消</view>
         <view class="distpicker-sure-btn" bindtap="distpickerSure">确定</view>
-    </view> 
+    </view>
     <picker-view indicator-style="height: 40px;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
         <!-- 省 -->
         <picker-view-column>

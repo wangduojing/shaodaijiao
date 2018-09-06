@@ -1,53 +1,62 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='nav'>
-    <view class='iconfont icon-user'></view>
-    <view class='gps-city' bindtap='choseCity'>
-      北京市<icon class='iconfont icon-xiala'></icon>
+    <view class='nav'>
+        <view class='iconfont icon-user'></view>
+        <view class='gps-city' bindtap='choseCity'>
+            北京市
+            <icon class='iconfont icon-xiala'></icon>
+        </view>
+        <view class='iconfont icon-bars'></view>
     </view>
-    <view class='iconfont icon-bars'></view>
-  </view>
-  <view class='chose'>
-    <view class='sdj-need'><icon class='iconfont icon-yezi'>  </icon>  求捎带</view>
-    <view class='sdj-help'><icon class='iconfont icon-yezi-copy'>  </icon>  帮捎带</view>
-  </view> 
-  <view class='star-end'>
-    <view class='star'><icon class='iconfont icon-qidian'></icon><text bindtap='sendinfor'>点击添加发件信息</text></view>
-    <view class='star end'><icon class='iconfont icon-zhongdian'></icon><text>点击添加收件信息</text></view>
-  </view>  
-  <view class='need-infor'> 
-    <icon class='iconfont must-infor'>*</icon>
-    <text>物品信息：</text>
-    <image class='iconfont icon-dayuhao'></image>
-  </view> 
-  <view class='type-time'>
-    <view class='type-infor'>
-      <icon class='iconfont must-infor'>*</icon>
-      <text>取件类型：</text>
-      <button>预约</button>
-      <button>现在</button>
-    </view> 
-    <view class='time'>预约时间：</view>
-  </view>
-  <view class='thankfee'>
-    <text>感谢费：</text>
-    <image class='iconfont icon-dayuhao'></image>
-    <input value='可以更快被抢单哦 '></input>   
-  </view>
-  <view class='thankfee protect-price'>
-    <text>保价：</text>
-    <image class='iconfont icon-dayuhao'></image>
-    <input value='贵重物品建议保价 '></input>   
-  </view>
-  <view class='thankfee remark'>
-    <text>捎话：</text>
-    <image class='iconfont icon-dayuhao'></image> 
-  </view>
-  <view class='total'>
-    <view>
-      <icon class='iconfont icon-bullseye'></icon>66.66公里
-      <text> ¥55.00（参考价格）</text>
-    </view> 
-    <button>立即下单</button>
-  </view>
+    <view class='chose'>
+        <view class='sdj-need'>
+            <icon class='iconfont icon-yezi'> </icon> 求捎带</view>
+        <view class='sdj-help'>
+            <icon class='iconfont icon-yezi-copy'> </icon> 帮捎带</view>
+    </view>
+    <view class='star-end'>
+        <view class='star'>
+            <icon class='iconfont icon-qidian'></icon>
+            <text bindtap='sendinfor'>点击添加发件信息</text>
+        </view>
+        <view class='star end'>
+            <icon class='iconfont icon-zhongdian'></icon>
+            <text>点击添加收件信息</text>
+        </view>
+    </view>
+    <view class='need-infor'>
+        <icon class='iconfont must-infor'>*</icon>
+        <text>物品信息：</text>
+        <image class='iconfont icon-dayuhao'></image>
+    </view>
+    <view class='type-time'>
+        <view class='type-infor'>
+            <icon class='iconfont must-infor'>*</icon>
+            <text>取件类型：</text>
+            <button>预约</button>
+            <button>现在</button>
+        </view>
+        <view class='time'>预约时间：</view>
+    </view>
+    <view class='thankfee'>
+        <text>感谢费：</text>
+        <image class='iconfont icon-dayuhao'></image>
+        <input value='可以更快被抢单哦 '></input>
+    </view>
+    <view class='thankfee protect-price'>
+        <text>保价：</text>
+        <image class='iconfont icon-dayuhao'></image>
+        <input value='贵重物品建议保价 '></input>
+    </view>
+    <view class='thankfee remark'>
+        <text>捎话：</text>
+        <image class='iconfont icon-dayuhao'></image>
+    </view>
+    <view class='total'>
+        <view>
+            <icon class='iconfont icon-bullseye'></icon>66.66公里
+            <text> ¥55.00（参考价格）</text>
+        </view>
+        <button>立即下单</button>
+    </view>
 </view>
