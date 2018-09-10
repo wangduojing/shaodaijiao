@@ -1,4 +1,5 @@
 //app.js star
+var request = require('/utils/request.js');
 App({
     onLaunch: function() {
         // 展示本地存储能力
@@ -48,27 +49,29 @@ App({
 		return wx.getStorageSync(headerKey);
 	},
 	// 发起请求封装
-	httpsRequest: function (url, params) {
+	httpsRequest: function (url, params, functinName) {
 		var returnData = null;
-		wx.request({
-			url: this.globalData.requestUrl + url,
-			data: { 'json': "{'reqHeader':{" + this.globalData.headerDto + "},'reqBodyDto':{" + params + "}}" },
-			method: 'POST',
-			responseType: 'text',
-			dataType: 'json',
-			async: false,
-			header: { "Content-Type": "application/x-www-form-urlencoded" },
-			success: function (res) {
-				console.log("返回的数据" + res.data);
-				returnData = res.data;
-			},
-			fail: function (res) {
-				returnData = res.data;
-			},
-			complete: function () {
-				returnData = "这里还不知道怎么处理";
-			}
+		var header = this.globalData.headerDto;
+		url = this.globalData.requestUrl + url;
+		console.log("请求地址：" + url);
+		return new Promise(function (resolve, reject){
+			wx.request({
+				url: url,
+				data: { 'json': "{'reqHeader':{" + header + "},'reqBodyDto':{" + params + "}}" },
+				method: 'POST',
+				responseType: 'text',
+				dataType: 'json',
+				header: { "Content-Type": "application/x-www-form-urlencoded" },
+				success: function (res) {
+					resolve(res)
+				},
+				fail: function (res) {
+
+				},
+				complete: function () {
+					returnData = "这里还不知道怎么处理";
+				}
+			})
 		})
-		return returnData;
 	}
 })

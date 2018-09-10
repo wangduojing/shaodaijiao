@@ -144,26 +144,11 @@ Page({
 		})
 	},
 	onReady: function () {
-		var that = this;
-		wx.request({
-			url: 'https://mb.dlada56.com/wpc/list',
-			data: {},
-			method: 'POST',
-			responseType: 'text',
-			header: {
-				"Content-Type": "application/x-www-form-urlencoded"
-			},
-			success: function (data) {
-				that.setData({
-					contactList: data.data.resBodyDto.rearchContactsList//把数据赋值给contactList
-				})
-			},
-			fail: function (data) {
-				console.log("请求失败")
-			},
-			complete: function () {
-				console.log("成功与否都执行")
-			}
-		})
+		var request = require('../../utils/request')
+		request.contactlist('').then(resData => {
+			this.setData({
+				contactList: resData.data.resBodyDto.rearchContactsList//把数据赋值给contactList
+			})
+		});
 	}
 })
