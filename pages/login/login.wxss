@@ -17,12 +17,23 @@
 	width: 100%;
 	position: relative;
 }
-.sign .sign-input image{
+.sign .sign-input .icon-guanbi{
 	position:absolute;
 	right:0;
 	bottom:0;
 	width:26rpx;
-	height:50rpx;
+	height:70rpx;
+}
+.sign .sign-input view{
+	position:absolute;
+	right:0;
+	bottom:0;
+	width:90rpx;
+	height:70rpx;
+}
+.sign .sign-input view image{
+	float: left;
+	height:70rpx;
 }
 .sign-input .getnum{
 	position:absolute;
@@ -72,7 +83,9 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
     background-color: #1cbc9c;
     color:#fff;    
 }
-
+.argee text{
+	font-weight: 600;
+}
 
 
 

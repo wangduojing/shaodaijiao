@@ -31,10 +31,6 @@
     padding-left: 20rpx;
 }
 
-.plhcolor {
-    color: #d7d7d7;
-}
-
 .addresscon {
     float: left;
     padding-left: 20rpx;

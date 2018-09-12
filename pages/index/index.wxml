@@ -14,7 +14,7 @@
         <view class='sdj-help'>
             <icon class='iconfont icon-yezi-copy'> </icon> 帮捎带</view>
     </view>
-    <view class='star-end'>z
+    <view class='star-end'>
         <view class='star'>
             <icon class='iconfont icon-qidian'></icon>
             <text bindtap='sendinfor'>点击添加发件信息</text>
