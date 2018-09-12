@@ -14,7 +14,7 @@
         <view class='sdj-help'>
             <icon class='iconfont icon-yezi-copy'> </icon> 帮捎带</view>
     </view>
-    <view class='star-end'>
+    <view class='star-end'>z
         <view class='star'>
             <icon class='iconfont icon-qidian'></icon>
             <text bindtap='sendinfor'>点击添加发件信息</text>
@@ -33,7 +33,7 @@
         <view class='type-infor'>
             <icon class='iconfont must-infor'>*</icon>
             <text>取件类型：</text>
-            <button>预约</button>
+            <button class='base_textcolor'>预约</button>
             <button>现在</button>
         </view>
         <view class='time'>预约时间：</view>

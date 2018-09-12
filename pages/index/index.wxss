@@ -127,7 +127,6 @@ icon.must-infor {
     border: 1rpx solid #bbb;
     border-radius: 30rpx;
     margin: 20rpx 20rpx 0 0;
-    color: #ff9800;
 }
 
 .type-infor button:last-child {
@@ -204,7 +203,6 @@ icon.must-infor {
 .total button {
     float: right;
     width: 40%;
-    background: #ff9800;
     border: 0;
     border-radius: 0;
     color: #fff;

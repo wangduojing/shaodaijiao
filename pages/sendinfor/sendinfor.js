@@ -145,7 +145,7 @@ Page({
 	},
 	onReady: function () {
 		var request = require('../../utils/request')
-		request.contactlist('').then(resData => {
+		request.contactlist("{'name':'张三','age':'24'}").then(resData => {
 			this.setData({
 				contactList: resData.data.resBodyDto.rearchContactsList//把数据赋值给contactList
 			})

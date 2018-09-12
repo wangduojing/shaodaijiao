@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<view class='contain'>
+	<view class='sign'>
+		<view class='sign-input'>
+			<input placeholder='请输入手机号'></input>
+			<image class='iconfont icon-dayuhao'></image>
+		</view>
+		<view class='sign-input'>
+			<input placeholder='验证码'></input>
+			<button class="getnum base_textcolor base_bordercolor">获取验证码</button>
+		</view>
+		<view class='sign-input'>
+			<input placeholder='请输入6-16位密码'></input>
+			<image class='iconfont icon-dayuhao'></image>
+			<image class='iconfont icon-dayuhao'></image>
+		</view>
+		<button class="sign-btn">注册</button>
+		<view class="argee">
+			<checkbox checked></checkbox>
+			我已阅读并同意捎带脚注册协议
+		</view>
+	</view>
+</view>

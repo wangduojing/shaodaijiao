@@ -25,7 +25,7 @@
 
 .icon-yezi:before { content: "\e742";color: #1fd56d;}
 
-.icon-bullseye:before { content: "\e83b";  color: #ff9800;}
+.icon-bullseye:before { content: "\e83b";  color: #1cbc9c;}
 
 .icon-yezi-copy:before { content: "\ecc9";  color: #ff9800;}
 
@@ -48,3 +48,13 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 }  */
+.base_color,
+button {
+	background-color: #1cbc9c;	
+}
+.base_textcolor{
+	color:#1cbc9c;
+}
+.base_bordercolor{
+	border-color: #1cbc9c;
+}
