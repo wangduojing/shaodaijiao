@@ -1,0 +1,19 @@
+/* pages/argee.wxss */
+text{
+	display: block;
+	text-align: center;
+	font-size: 32rpx;
+	font-weight: 600;
+	line-height: 60rpx;
+}
+.contain{
+	width:94%;
+	margin: 20rpx auto 0;
+	font-size: 26rpx;
+	line-height: 40rpx;
+	padding-bottom: 100rpx;
+}
+.contain view{
+	margin-bottom: 16rpx;
+	text-indent: 54rpx;
+}

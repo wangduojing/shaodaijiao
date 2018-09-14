@@ -1,0 +1,8 @@
+{
+	"component": true,
+	"usingComponents": {},
+	"backgroundTextStyle": "light",
+	"navigationBarBackgroundColor": "#fff",
+	"navigationBarTitleText": "注册协议",
+	"navigationBarTextStyle": "black"
+}
