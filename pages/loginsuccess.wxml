@@ -1,0 +1,6 @@
+<!--pages/loginsuccess.wxml-->
+<view class='contain'>
+	<image class='iconfont icon-jiangbei'></image>
+	<view>恭喜您，注册成功!</view>
+	<button> 立即下载捎带脚</button>
+</view>
