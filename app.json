@@ -1,12 +1,12 @@
 {
     "pages": [
-		"pages/loginsuccess",
-        "pages/login/login",
+        "pages/register/register",
+        "pages/register/success/registersuccess",
         "pages/sendinfor/sendinfor",
         "pages/index/index",
         "pages/argee/argee",
-        "pages/logs/logs"
-        
+        "pages/logs/logs",
+        "pages/auth/auth"
     ],
     "window": {
         "backgroundTextStyle": "light",

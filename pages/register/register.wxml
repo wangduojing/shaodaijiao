@@ -1,17 +1,17 @@
 <!--pages/login/login.wxml-->
-<form bindsubmit="signPersonInfo">
+<form bindsubmit="check_submitInfo">
 <view class='contain'>
 	<view class='sign'>
 		<view class='sign-input'>
-			<input type='number' name="tel" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{tel}}"></input>
+			<input type='number' name="phone" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{phone}}" bindinput='input_phone'></input>
 			<image class='iconfont icon-guanbi' bindtap='clearAll'></image>
 		</view>
 		<view class='sign-input'>
-			<input type='number' name="num" placeholder-class='plhcolor' placeholder='验证码'></input>
+			<input type='number' name="code" placeholder-class='plhcolor' placeholder='验证码' value="{{code}}"></input>
 			<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode'>{{waittime}}</button>
 		</view>
 		<view class='sign-input'>
-			<input name="pwd" password='{{staticImg}}' value="{{pwd}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>
+			<input name="password" password='{{staticImg}}' value="{{password}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>
 			<view>
 				<image class='iconfont icon-guanbi' bindtap='clearPwd'></image>
 				<image class="iconfont {{staticImg ? 'icon-mimabukejian' : 'icon-mimakejian'}}" bindtap='click_secret'></image>

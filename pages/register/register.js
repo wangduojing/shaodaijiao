@@ -1,4 +1,6 @@
 // pages/login/login.js
+var request = require('../../utils/request') // 请求js文件
+var validate = require('../../utils/validate') // 验证js文件
 Page({
 
     /**
@@ -7,11 +9,12 @@ Page({
     data: {
 		showMessage: false,
 		messageContent: '',
-		tel:'',
-		pwd:'',
+		phone:'',
+		code:'',
+		password:'',
 		staticImg: true,
 		waittime:'获取验证码',
-		currentTime : 60,
+		currentTime : 60
     },
 
     /**
@@ -52,13 +55,13 @@ Page({
 	*/
 	clearAll: function(e) {
 		this.setData({
-			tel: e.detail.value = ""
+			phone: e.detail.value = ""
 		})
 		
     },
 	clearPwd:function(e){
 		this.setData({
-			pwd: e.detail.value = ""
+			password: e.detail.value = ""
 		})
 	},
 	/** 
@@ -75,6 +78,12 @@ Page({
 	 * 获取验证码
 	 */
 	getmobilecode: function(e){
+		// 获取验证码按钮不可点击,倒计时结束后才可再次点击 TODO
+		var flag = validate.check_phone(this.data.phone);
+		if(!flag){
+			this.showMessage('请输入正确手机号码')
+			return;
+		}
 		var that = this
 		var timevalue = "秒重新发送"
 		var currentTime = that.data.currentTime
@@ -94,30 +103,49 @@ Page({
 			})
 		}
 		},1000)
+		// 发送验证码请求
+		request.code_register("{'phone': " + this.data.phone + "}").then(resData => {
+			this.showMessage(resData.data.message)
+		});
 	},
 	/** 
 	*	验证文本框
 	*/
-	signPersonInfo: function (e) {
-		var data = e.detail.value
-		var telRule = /^1[3|4|5|7|8]\d{9}$/
-		if (data.tel == '') {
-			this.showMessage('请输入手机号码')
-		} else if (!telRule.test(data.tel)) {
-			this.showMessage('手机号码格式不正确')
-		} else if (data.name == '') {
-			this.showMessage('请输入验证码')
-		} else if (data.name == '什么什么') {
-			this.showMessage('验证码不正确')
-		} else if (data.pwd == '') {
-			this.showMessage('请输入密码')
-		} else {
-			this.showMessage('注册成功')
-			console.log(data)//打印数据
-			wx.navigateTo({
-				url: '../logs/logs',
-			})
+	check_submitInfo: function (e) {
+		// 提交信息验证
+		var phone = e.detail.value.phone
+		var code = e.detail.value.code
+		var password = e.detail.value.password
+		var flag1 = validate.check_phone(phone);
+		var flag2 = validate.check_code(code);
+		var flag3 = validate.check_password(password);
+		if(!flag1){
+			this.showMessage('请输入正确手机号码')
+			return
 		}
+		if(!flag2){
+			this.showMessage('请输入正确验证码')
+			return
+		}
+		if (!flag3) {
+			this.showMessage('密码不符合规范')
+			return
+		}
+		// 发起请求
+		var requestParams = "{'phone':"+phone+",'code':'"+code+"','password':'"+password+"'}"
+		request.user_register(requestParams).then(resData => {
+			console.log(resData);
+			if(resData.data.stateCode != 200){
+				this.showMessage(resData.data.message)
+				return
+			}
+			// 缓存登录信息
+			getApp().cacheHeader(JSON.stringify(resData.data.resHeadDto));
+			// 跳转注册成功页面
+			wx.navigateTo({
+				url: '../register/success/registersuccess',
+			})
+		})
 	},
 	/** 
 	*	验证提示信息
@@ -135,6 +163,13 @@ Page({
 			})
 		}, 3000)
 	},
+	// 获取input框输入值
+	input_phone: function (e) {
+		this.setData({
+			phone: e.detail.value
+		})
+	},
+
 	/** 
 	*	协议跳转
 	*/
@@ -143,5 +178,4 @@ Page({
 			url: '../argee/argee',
 		})
 	}
-
 })

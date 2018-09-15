@@ -1,4 +1,4 @@
-// pages/loginsuccess.js
+// pages/auth/auth.js
 Page({
 
   /**

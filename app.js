@@ -3,10 +3,12 @@ var request = require('/utils/request.js');
 App({
     onLaunch: function() {
         // 展示本地存储能力
-        var logs = wx.getStorageSync('logs') || []
-        logs.unshift(Date.now())
-        wx.setStorageSync('logs', logs)
-
+        // var logs = wx.getStorageSync('logs') || []
+        // logs.unshift(Date.now())
+        // wx.setStorageSync('logs', logs)
+		if (this.getHeader() == null){
+			this.cacheHeader("{'channelName': '小程序','deviceId': '', 'accessToken': '', 'clientType': '3', 'appEdition': '111', 'channelId': '', 'account': ''}");
+		}
         // 登录
         wx.login({
             success: res => {
@@ -37,27 +39,26 @@ App({
 	globalData: {
 		requestUrl: 'https://mb.dlada56.com',
 		headerKey: 'wechat_sdj_header',
-		headerDto: null,
-		userInfo: null
+		headerDto: '',
+		userInfo: ''
 	},
 	// 缓存登录信息
 	cacheHeader: function (headerDto) {
-		wx.setStorageSync(headerKey, headerDto)
+		wx.setStorageSync(this.globalData.headerKey, headerDto)
 	},
 	// 获取缓存的登录信息
 	getHeader: function () {
-		return wx.getStorageSync(headerKey);
+		return wx.getStorageSync(this.globalData.headerKey);
 	},
 	// 发起请求封装
 	httpsRequest: function (url, params, functinName) {
 		var returnData = null;
-		var header = this.globalData.headerDto;
+		var header = this.getHeader();
 		url = this.globalData.requestUrl + url;
-		console.log("请求地址：" + url);
 		return new Promise(function (resolve, reject){
 			wx.request({
 				url: url,
-				data: { 'json': "{'reqHeader':{" + header + "},'reqBodyDto':{" + params + "}}" },
+				data: { 'json': "{'reqHeader':" + header + ",'reqBodyDto':" + params + "}" },
 				method: 'POST',
 				responseType: 'text',
 				dataType: 'json',
