@@ -6,7 +6,7 @@ App({
         // var logs = wx.getStorageSync('logs') || []
         // logs.unshift(Date.now())
         // wx.setStorageSync('logs', logs)
-		if (this.getHeader() == null){
+		if (this.getHeader() == null || this.getHeader() == ''){
 			this.cacheHeader("{'channelName': '小程序','deviceId': '', 'accessToken': '', 'clientType': '3', 'appEdition': '111', 'channelId': '', 'account': ''}");
 		}
         // 登录
