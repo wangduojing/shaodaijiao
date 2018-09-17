@@ -1,13 +1,9 @@
 {
     "pages": [
-<<<<<<< HEAD
 		"pages/default",
-        "pages/loginsuccess",
         "pages/login/login",
-=======
         "pages/register/register",
         "pages/register/success/registersuccess",
->>>>>>> 3c36caa696b78bbe089b07fa503791c4e3f06654
         "pages/sendinfor/sendinfor",
         "pages/index/index",
         "pages/argee/argee",
