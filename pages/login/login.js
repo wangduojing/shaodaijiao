@@ -12,6 +12,7 @@ Page({
 		staticImg: true,
 		waittime:'获取验证码',
 		currentTime : 60,
+		disabled: false
     },
 
     /**
@@ -72,37 +73,54 @@ Page({
 		
 	},
 	/**
-	 * 获取验证码
+	 * 获取验证码:存储用户输入的手机号
+	 */
+	getTel:function(e){
+		this.setData({
+			tel: e.detail.value,
+			disabled: false
+		})
+	},
+	
+	/**
+	 * 获取验证码:点击获取
 	 */
 	getmobilecode: function(e){
 		var that = this
-		that.setData({
-			tel: data.tel.value
-		})
-		if(data.tel == '') {
+		var telRule = /^1[3|4|5|7|8]\d{9}$/
+		if(this.data.tel == '') {
 			this.showMessage('请先输入手机号')
+		} else if (!telRule.test(this.data.tel)){
+			this.showMessage('手机号码格式不正确')
 		}else {
 			var that = this
 			var timevalue = "秒重新发送"
 			var currentTime = that.data.currentTime
 			that.setData({
+				disabled: true,//点击后不可再次点击
 				waittime: currentTime + timevalue
 			})
 			var interval = setInterval(function () {
-				that.setData({
+				that.setData({	
 					waittime: (currentTime - 1) + "秒重新发送"
 				})
+				
 				currentTime--
-
+				
 				if (currentTime <= 0) {
 					clearInterval(interval)
 					that.setData({
-						waittime: "重新获取验证码"
+						waittime: "重新获取验证码",
+						disabled: false
 					})
+					
 				}
+				
 			}, 1000)
+			
 		}	
 	},
+	
 	/** 
 	*	验证文本框
 	*/

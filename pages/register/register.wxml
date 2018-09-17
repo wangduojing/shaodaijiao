@@ -8,7 +8,7 @@
 		</view>
 		<view class='sign-input'>
 			<input type='number' name="code" placeholder-class='plhcolor' placeholder='验证码' value="{{code}}"></input>
-			<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode'>{{waittime}}</button>
+			<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode' disabled='{{disabled}}'>{{waittime}}</button>
 		</view>
 		<view class='sign-input'>
 			<input name="password" password='{{staticImg}}' value="{{password}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>

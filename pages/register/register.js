@@ -14,7 +14,8 @@ Page({
 		password:'',
 		staticImg: true,
 		waittime:'获取验证码',
-		currentTime : 60
+		currentTime : 60,
+		disabled: false
     },
 
     /**
@@ -78,7 +79,7 @@ Page({
 	 * 获取验证码
 	 */
 	getmobilecode: function(e){
-		// 获取验证码按钮不可点击,倒计时结束后才可再次点击 TODO
+		// 获取验证码按钮不可点击,倒计时结束后才可再次点击
 		var flag = validate.check_phone(this.data.phone);
 		if(!flag){
 			this.showMessage('请输入正确手机号码')
@@ -88,7 +89,8 @@ Page({
 		var timevalue = "秒重新发送"
 		var currentTime = that.data.currentTime
 		that.setData({
-			waittime: currentTime + timevalue
+			waittime: currentTime + timevalue,
+			disabled: true//点击后 按钮灰置不可再点击
 		})
 		var interval = setInterval(function(){
 			that.setData({
@@ -99,7 +101,8 @@ Page({
 		if (currentTime <= 0){
 			clearInterval(interval)
 			that.setData({
-				waittime: "重新获取验证码"
+				waittime: "重新获取验证码",
+				disabled: false
 			})
 		}
 		},1000)

@@ -3,12 +3,12 @@
 <view class='contain'>
 	<view class='sign'>
 		<view class='sign-input'>
-			<input type='number' name="tel" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{tel}}"></input>
+			<input type='number' name="tel" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{tel}}" bindinput='getTel'></input>
 			<image class='iconfont icon-guanbi' bindtap='clearAll'></image>
 		</view>
 		<view class='sign-input'>
 			<input type='number' name="num" placeholder-class='plhcolor' placeholder='验证码'></input>
-			<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode'>{{waittime}}</button>
+			<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode' disabled='{{disabled}}'>{{waittime}}</button>
 		</view>
 		<view class='sign-input'>
 			<input name="pwd" password='{{staticImg}}' value="{{pwd}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>
