@@ -76,24 +76,32 @@ Page({
 	 */
 	getmobilecode: function(e){
 		var that = this
-		var timevalue = "秒重新发送"
-		var currentTime = that.data.currentTime
 		that.setData({
-			waittime: currentTime + timevalue
+			tel: data.tel.value
 		})
-		var interval = setInterval(function(){
+		if(data.tel == '') {
+			this.showMessage('请先输入手机号')
+		}else {
+			var that = this
+			var timevalue = "秒重新发送"
+			var currentTime = that.data.currentTime
 			that.setData({
-				waittime: (currentTime - 1) +"秒重新发送"
+				waittime: currentTime + timevalue
 			})
-			currentTime--
-		
-		if (currentTime <= 0){
-			clearInterval(interval)
-			that.setData({
-				waittime: "重新获取验证码"
-			})
-		}
-		},1000)
+			var interval = setInterval(function () {
+				that.setData({
+					waittime: (currentTime - 1) + "秒重新发送"
+				})
+				currentTime--
+
+				if (currentTime <= 0) {
+					clearInterval(interval)
+					that.setData({
+						waittime: "重新获取验证码"
+					})
+				}
+			}, 1000)
+		}	
 	},
 	/** 
 	*	验证文本框
