@@ -80,6 +80,7 @@ Page({
 	 */
 	getmobilecode: function(e){
 		// 获取验证码按钮不可点击,倒计时结束后才可再次点击
+		console.log(this.data.phone);
 		var flag = validate.check_phone(this.data.phone);
 		if(!flag){
 			this.showMessage('请输入正确手机号码')
@@ -108,6 +109,7 @@ Page({
 		},1000)
 		// 发送验证码请求
 		request.code_register("{'phone': " + this.data.phone + "}").then(resData => {
+			console.log(resData);
 			this.showMessage(resData.data.message)
 		});
 	},

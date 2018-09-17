@@ -4,9 +4,29 @@
     width: 100%;
 }
 
+.logintype {
+    width: 78%;
+    margin: 20rpx auto 0;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.logintype view{
+	width: 50%;
+	line-height: 80rpx;
+	text-align:  center;
+}
+.base_bordercolor{
+	border-bottom: 4rpx solid;
+}
+.base_bordercolor{
+	border-color: #1cbc9c;
+}
 .sign {
     width: 78%;
-    margin: 82rpx auto 0;
+    margin: 30rpx auto 0;
     color: #333;
     font-size: 30rpx;
 }
@@ -55,7 +75,7 @@
     border: 1px solid;
     background: #fff;
     border-radius: 40rpx;
-	z-index: 4;
+    z-index: 4;
 }
 
 .sign-btn {
@@ -65,7 +85,7 @@
     font-size: 32rpx;
     border-radius: 40rpx;
     letter-spacing: 4rpx;
-    margin: 212rpx auto 22rpx;
+    margin: 160rpx auto 22rpx;
 }
 
 .argee {
@@ -140,12 +160,21 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
         transform: none;
     }
 }
-.sign-input view{
-	z-index: 3;
-}
-.icon-mimabukejian,
-.icon-mimakejian{
-	z-index: 4;
-	width:50rpx;
 
+.sign-input view {
+    z-index: 3;
+}
+
+.icon-mimabukejian, .icon-mimakejian {
+    z-index: 4;
+    width: 50rpx;
+}
+.otherhelp{
+	width: 98%;
+    margin: 16rpx auto 0;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }

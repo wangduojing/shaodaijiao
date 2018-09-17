@@ -1,1 +1,8 @@
-{}
+{
+	"component": true,
+	"usingComponents": {},
+	"backgroundTextStyle": "light",
+	"navigationBarBackgroundColor": "#fff",
+	"navigationBarTitleText": "注册成功",
+	"navigationBarTextStyle": "black"
+}

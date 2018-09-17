@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+		active: true,
 		showMessage: false,
 		messageContent: '',
 		tel:'',
@@ -12,7 +13,11 @@ Page({
 		staticImg: true,
 		waittime:'获取验证码',
 		currentTime : 60,
-		disabled: false
+		disabled: false,
+		selecttype: true,
+		hiddenaccount: false,
+		hiddenphone: true
+		
     },
 
     /**
@@ -48,6 +53,32 @@ Page({
     onShareAppMessage: function() {
 
     },
+	/**
+	 * 点击切换登录方式
+	 */
+	
+	hasAccount: function(){	
+		hiddenphone: true
+		hiddenaccount: true
+		this.setData({
+			active: true,
+			selecttype: true,
+			hiddenaccount: false,
+			hiddenphone: true
+		})	
+	},
+	noAccount: function () {
+		hiddenphone: true
+		hiddenaccount: true
+		this.setData({
+			active: false,
+			selecttype: false,
+			hiddenaccount: true,
+			hiddenphone: false
+		})
+
+	},
+	
 	/** 
 	*	点击清除文本框的内容
 	*/
@@ -162,11 +193,16 @@ Page({
 		}, 3000)
 	},
 	/** 
-	*	协议跳转
+	*	找回密码和免费注册跳转
 	*/
-	deal: function(){
+	forgotpwd: function(){
 		wx.navigateTo({
 			url: '../argee/argee',
+		})
+	},
+	register: function(){
+		wx.navigateTo({
+			url: "../register/register",
 		})
 	}
 

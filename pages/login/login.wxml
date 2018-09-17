@@ -1,28 +1,54 @@
 <!--pages/login/login.wxml-->
-<form bindsubmit="signPersonInfo">
+
+
 <view class='contain'>
-	<view class='sign'>
-		<view class='sign-input'>
-			<input type='number' name="tel" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{tel}}" bindinput='getTel'></input>
-			<image class='iconfont icon-guanbi' bindtap='clearAll'></image>
-		</view>
-		<view class='sign-input'>
-			<input type='number' name="num" placeholder-class='plhcolor' placeholder='验证码'></input>
-			<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode' disabled='{{disabled}}'>{{waittime}}</button>
-		</view>
-		<view class='sign-input'>
-			<input name="pwd" password='{{staticImg}}' value="{{pwd}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>
-			<view>
-				<image class='iconfont icon-guanbi' bindtap='clearPwd'></image>
-				<image class="iconfont {{staticImg ? 'icon-mimabukejian' : 'icon-mimakejian'}}" bindtap='click_secret'></image>
-			</view>			
-		</view>
-		<button class="sign-btn" formType="submit" bindtap='formbtn'>注册</button>
-		<view class="argee">
-			<checkbox checked></checkbox>
-			我已阅读并同意<text bindtap='deal'>捎带脚注册协议</text>
-		</view>
+	<view class='logintype'>
+		<view class="{{active ? 'base_bordercolor':''}}" bindtap='hasAccount'>账号登录</view>
+		<view class="{{active ? '':'base_bordercolor'}}" bindtap='noAccount'>手机号快捷登录</view>
 	</view>
+	<form bindsubmit="signPersonInfo">
+		<view hidden='{{hiddenaccount}}' class="selecttype ? 'has-account':'phone-account'">
+			<view class='sign'>
+				<view class='sign-input'>
+					<input type='number' name="tel" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{tel}}" bindinput='getTel'></input>
+					<image class='iconfont icon-guanbi' bindtap='clearAll'></image>
+				</view>			
+				
+				<view class='sign-input'>
+					<input name="pwd" password='{{staticImg}}' value="{{pwd}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>
+					<view>
+						<image class='iconfont icon-guanbi' bindtap='clearPwd'></image>
+						<image class="iconfont {{staticImg ? 'icon-mimabukejian' : 'icon-mimakejian'}}" bindtap='click_secret'></image>
+					</view>			
+				</view>
+				<view class="otherhelp">
+					<text bindtap='forgotpwd'>找回密码</text>
+					<text bindtap='register' class="base_textcolor">免费注册</text>
+				</view>
+				<button class="sign-btn" formType="submit" bindtap='formbtn'>登录</button>
+			</view>
+		</view>
+
+		<view hidden='{{hiddenphone}}' class="selecttype ? 'has-account':'phone-account'">
+			<view class='sign'>
+				<view class='sign-input'>
+					<input type='number' name="tel" placeholder-class='plhcolor' placeholder='请输入手机号' maxlength='11' value="{{tel}}" bindinput='getTel'></input>
+					<image class='iconfont icon-guanbi' bindtap='clearAll'></image>
+				</view>
+				<view class='sign-input'>
+					<input type='number' name="num" placeholder-class='plhcolor' placeholder='验证码'></input>
+					<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode' disabled='{{disabled}}'>{{waittime}}</button>
+				</view>
+				<view class="otherhelp">
+					<text bindtap='forgotpwd'> </text>
+					<text bindtap='register' class="base_textcolor">免费注册</text>
+				</view>
+				
+				<button class="sign-btn" formType="submit" bindtap='formbtn'>登录</button>
+			</view>
+		</view>
+	</form>
+	
 </view>
-</form>
+
 <view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>
