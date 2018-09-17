@@ -1,4 +1,6 @@
 // pages/login/login.js
+var validate = require('../../utils/validate') // 验证js文件
+var request = require('../../utils/request') // 请求js文件
 Page({
 
     /**
@@ -9,6 +11,7 @@ Page({
 		showMessage: false,
 		messageContent: '',
 		tel:'',
+		code: '',
 		pwd:'',
 		staticImg: true,
 		waittime:'获取验证码',
@@ -84,13 +87,13 @@ Page({
 	*/
 	clearAll: function(e) {
 		this.setData({
-			tel: e.detail.value = ""
+			tel: ''
 		})
 		
     },
 	clearPwd:function(e){
 		this.setData({
-			pwd: e.detail.value = ""
+			pwd: ''
 		})
 	},
 	/** 
@@ -112,7 +115,22 @@ Page({
 			disabled: false
 		})
 	},
-	
+	/**
+	 * 存储用户输入的密码
+	 */
+	input_password: function(e) {
+		this.setData({
+			pwd: e.detail.value,
+		})
+	},
+	/**
+	 * 存储短信验证码
+	 */
+	input_code: function (e) {
+		this.setData({
+			code: e.detail.value,
+		})
+	},
 	/**
 	 * 获取验证码:点击获取
 	 */
@@ -156,23 +174,49 @@ Page({
 	*	验证文本框
 	*/
 	signPersonInfo: function (e) {
-		var data = e.detail.value
-		var telRule = /^1[3|4|5|7|8]\d{9}$/
-		if (data.tel == '') {
-			this.showMessage('请输入手机号码')
-		} else if (!telRule.test(data.tel)) {
-			this.showMessage('手机号码格式不正确')
-		} else if (data.name == '') {
-			this.showMessage('请输入验证码')
-		} else if (data.name == '什么什么') {
-			this.showMessage('验证码不正确')
-		} else if (data.pwd == '') {
-			this.showMessage('请输入密码')
+		var phone = this.data.tel
+		var flag1 = validate.check_phone(phone)
+		if (!flag1) {
+			this.showMessage("请输入正确的手机号码")
+		}
+		if (this.data.disabled){
+			// 手机号快捷登录
+			var code = this.data.code
+			var flag2 = validate.check_code(code)
+			if (!flag2) {
+				this.showMessage("请输入正确的短信验证码")
+			}
+			request.quick_login("{'userName': '" + phone + "', 'code': '" + code + "'}").then(resData => {
+				if (resData.data.stateCode != 200) {
+					this.showMessage(resData.data.message)
+					return
+				}
+				// 缓存登录信息
+				getApp().cacheHeader(JSON.stringify(resData.data.resHeadDto));
+				// 跳转登录成功页面
+				wx.navigateTo({
+					url: '../default',
+				})
+			})
+
 		} else {
-			this.showMessage('注册成功')
-			console.log(data)//打印数据
-			wx.navigateTo({
-				url: '../logs/logs',
+			// 账号登录
+			var password = this.data.pwd
+			var flag2 = validate.check_password(password)
+			if(!flag2){
+				this.showMessage("密码不符合规范")
+			}
+			request.user_login("{'userName': '" + phone + "', 'userPassword': '" + password + "'}").then(resData => {
+				if (resData.data.stateCode != 200) {
+					this.showMessage(resData.data.message)
+					return
+				}
+				// 缓存登录信息
+				getApp().cacheHeader(JSON.stringify(resData.data.resHeadDto));
+				// 跳转登录成功页面
+				wx.navigateTo({
+					url: '../default',
+				})
 			})
 		}
 	},

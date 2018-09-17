@@ -109,7 +109,6 @@ Page({
 		},1000)
 		// 发送验证码请求
 		request.code_register("{'phone': " + this.data.phone + "}").then(resData => {
-			console.log(resData);
 			this.showMessage(resData.data.message)
 		});
 	},
@@ -139,7 +138,6 @@ Page({
 		// 发起请求
 		var requestParams = "{'phone':"+phone+",'code':'"+code+"','password':'"+password+"'}"
 		request.user_register(requestParams).then(resData => {
-			console.log(resData);
 			if(resData.data.stateCode != 200){
 				this.showMessage(resData.data.message)
 				return

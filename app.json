@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/register/register",
         "pages/login/login",
+        "pages/register/register",
 		"pages/default",
         "pages/register/success/registersuccess",
         "pages/sendinfor/sendinfor",

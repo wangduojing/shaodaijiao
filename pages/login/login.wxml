@@ -15,7 +15,7 @@
 				</view>			
 				
 				<view class='sign-input'>
-					<input name="pwd" password='{{staticImg}}' value="{{pwd}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码'></input>
+					<input name="pwd" password='{{staticImg}}' value="{{pwd}}" placeholder-class='plhcolor' placeholder='请输入6-16位密码' bindinput='input_password'></input>
 					<view>
 						<image class='iconfont icon-guanbi' bindtap='clearPwd'></image>
 						<image class="iconfont {{staticImg ? 'icon-mimabukejian' : 'icon-mimakejian'}}" bindtap='click_secret'></image>
@@ -25,7 +25,6 @@
 					<text bindtap='forgotpwd'>找回密码</text>
 					<text bindtap='register' class="base_textcolor">免费注册</text>
 				</view>
-				<button class="sign-btn" formType="submit" bindtap='formbtn'>登录</button>
 			</view>
 		</view>
 
@@ -36,17 +35,16 @@
 					<image class='iconfont icon-guanbi' bindtap='clearAll'></image>
 				</view>
 				<view class='sign-input'>
-					<input type='number' name="num" placeholder-class='plhcolor' placeholder='验证码'></input>
+					<input type='number' name="num" placeholder-class='plhcolor' placeholder='验证码' bindinput='input_code'></input>
 					<button class="getnum base_textcolor base_bordercolor" bindtap='getmobilecode' disabled='{{disabled}}'>{{waittime}}</button>
 				</view>
 				<view class="otherhelp">
 					<text bindtap='forgotpwd'> </text>
 					<text bindtap='register' class="base_textcolor">免费注册</text>
 				</view>
-				
-				<button class="sign-btn" formType="submit" bindtap='formbtn'>登录</button>
 			</view>
 		</view>
+		<button class="sign-btn" formType="submit" bindtap='formbtn'>登录</button>
 	</form>
 	
 </view>
