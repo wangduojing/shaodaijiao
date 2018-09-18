@@ -178,3 +178,15 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
     flex-wrap: nowrap;
     justify-content: space-between;
 }
+.wechat-login{
+	width: 78%;
+	margin:100rpx auto 0;
+	text-align: center
+}
+.wechat-login{
+	width: 33%;
+	border-bottom: 2rpx solid #999;
+}
+.wechat-login .icon-weixin{
+	border: none
+}
