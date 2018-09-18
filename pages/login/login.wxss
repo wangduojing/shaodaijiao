@@ -181,12 +181,19 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 .wechat-login{
 	width: 78%;
 	margin:100rpx auto 0;
-	text-align: center
+	text-align: center;
+	line-height: 80rpx;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+	align-items:center;
 }
-.wechat-login{
+.wechat-login text{
 	width: 33%;
+	height: 38rpx;	
 	border-bottom: 2rpx solid #999;
 }
 .wechat-login .icon-weixin{
-	border: none
+	border: none;	
 }
