@@ -1,15 +1,21 @@
 {
     "pages": [
-        "pages/forgetpassword/forgetpassword",
-        "pages/register/register",
         "pages/login/login",
+        "pages/register/register",
         "pages/default",
         "pages/register/success/registersuccess",
         "pages/sendinfor/sendinfor",
         "pages/index/index",
         "pages/argee/argee",
         "pages/logs/logs",
-        "pages/auth/auth"
+        "pages/auth/auth",
+        "pages/publish/trip/pulish_trip",
+        "pages/publish/trip/trip_list",
+        "pages/publish/trip/trip_detail",
+        "pages/publish/trip/cargo_list",
+        "pages/publish/trip/cargo_detail",
+        "pages/publish/trip/canorder_list",
+        "pages/publish/trip/canorder_detail"
     ],
     "window": {
         "backgroundTextStyle": "light",
