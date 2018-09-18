@@ -5,7 +5,10 @@ var url = {
 	usr_login: '/usr/gin', // 登录
 	publish_contactlist: '/wpc/list', // 常用联系人列表
 	code_register: '/code/reg', // 注册获取短信验证码
-	quick_login: '/usr/sin' // 快捷登录
+	code_forget_password: '/code/mpl',//忘记密码获取短信验证码
+	quick_login: '/usr/sin', // 快捷登录
+	forget_password: '/usr/fpd'// 忘记密码
+
 }
 // 注册获取验证码
 function code_register (params) {
