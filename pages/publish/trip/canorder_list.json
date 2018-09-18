@@ -1,1 +1,8 @@
-{}
+{
+	"component": true,
+	"usingComponents": {},
+	"backgroundTextStyle": "light",
+	"navigationBarBackgroundColor": "#fff",
+	"navigationBarTitleText": "可接订单",
+	"navigationBarTextStyle": "black"
+}

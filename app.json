@@ -14,8 +14,7 @@
         "pages/publish/trip/trip_detail",
         "pages/publish/trip/cargo_list",
         "pages/publish/trip/cargo_detail",
-        "pages/publish/trip/canorder_list",
-        "pages/publish/trip/canorder_detail"
+        "pages/publish/trip/canorder_list"
     ],
     "window": {
         "backgroundTextStyle": "light",
