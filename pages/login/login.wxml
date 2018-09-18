@@ -45,8 +45,11 @@
 			</view>
 		</view>
 		<button class="sign-btn" formType="submit" bindtap='formbtn'>登录</button>
-	</form>
-	
+	</form>	
 </view>
-
+<view class='wechat-login'>
+	<text></text>
+	<text class='iconfont icon-weixin'></text>
+	<text></text>
+</view>
 <view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

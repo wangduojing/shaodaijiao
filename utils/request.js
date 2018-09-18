@@ -30,11 +30,21 @@ function quick_login(params) {
 function publish_contactlist (params) {
 	return getApp().httpsRequest(url.publish_contactlist, params)
 }
+//忘记密码:获取验证码
+function code_forget_password(params) {
+	return getApp().httpsRequest(url.code_forget_password, params)
+}
+//忘记密码:提交
+function forget_password(params) {
+	return getApp().httpsRequest(url.forget_password, params)
+}
 // 暴露方法
 module.exports = {
 	code_register: code_register,
 	user_register: user_register,
 	user_login: user_login,
 	quick_login: quick_login,
-	publish_contactlist: publish_contactlist
+	publish_contactlist: publish_contactlist,
+	code_forget_password: code_forget_password,
+	forget_password: forget_password
 }

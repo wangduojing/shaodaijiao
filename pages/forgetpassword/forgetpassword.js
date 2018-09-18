@@ -77,34 +77,36 @@ Page({
 	 * 获取验证码
 	 */
 	getmobilecode: function (e) {
-		var flag = validate.check_phone(this.data.phone)
-		if(!flag){
+		var flag = validate.check_phone(this.data.phone);
+		if (!flag) {
 			this.showMessage('请输入正确手机号码')
-			return
+			return;
 		}
 		var that = this
-		var timevalue = '秒重新发送'
+		var timevalue = "秒重新发送"
 		var currentTime = that.data.currentTime
 		that.setData({
 			waittime: currentTime + timevalue,
-			disabled: true
+			disabled: true//点击后 按钮灰置不可再点击
 		})
-		var interval = setInterval(function(){
+		var interval = setInterval(function () {
 			that.setData({
-				waitTime: (currentTime -1) + '秒重新发送'
+				waittime: (currentTime - 1) + "秒重新发送"
 			})
 			currentTime--
-			if(currentTime <=0){
+
+			if (currentTime <= 0) {
 				clearInterval(interval)
 				that.setData({
-					waittime: '重新获取验证码',
+					waittime: "重新获取验证码",
 					disabled: false
 				})
 			}
-		},1000)
+		}, 1000)
 		// 发送验证码请求
-		request.code_register("{'phone':" + this.data.phone + "}").then(resData => {
-			this.showMessage(resData).data.message
+		request.code_forget_password("{'phone':" + this.data.phone + "}").then(dddd => {
+			console.log(dddd);
+			this.showMessage(dddd.data.message)
 		})
 	},
 	/** 
@@ -114,7 +116,7 @@ Page({
 		// 提交信息验证
 		var phone = e.detail.value.phone
 		var code = e.detail.value.code
-		var newPassword = e.detail.value.newPassword
+		var newPassword = e.detail.value.password
 		var flag1 = validate.check_phone(phone);
 		var flag2 = validate.check_code(code);
 		var flag3 = validate.check_password(newPassword);
@@ -132,7 +134,7 @@ Page({
 		}
 		// 发起请求
 		var requestParams = "{'phone':" + phone + ",'code':'" + code + "','newPassword':'" + newPassword + "'}"
-		request.user_register(requestParams).then(resData => {
+		request.forget_password(requestParams).then(resData => {
 			if (resData.data.stateCode != 200) {
 				this.showMessage(resData.data.message)
 				return
