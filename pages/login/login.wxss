@@ -192,7 +192,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 .wechat-login text{
 	width: 33%;
 	height: 38rpx;	
-	border-bottom: 2rpx solid #999;
+	border-bottom: 2rpx solid #e0e0e0;
 }
 .wechat-login .icon-weixin{
 	border: none;	

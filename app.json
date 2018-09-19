@@ -1,11 +1,11 @@
 {
     "pages": [
+        "pages/order/order",
         "pages/login/login",
         "pages/register/register",
         "pages/default",
         "pages/register/success/registersuccess",
         "pages/sendinfor/sendinfor",
-        "pages/index/index",
         "pages/argee/argee",
         "pages/logs/logs",
         "pages/auth/auth",
