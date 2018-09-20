@@ -1,2 +1,150 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+    <view class='nav'>
+        <view class='common-nav'>
+            <view class='iconfont icon-user'></view>
+            <view class='iconfont icon-bars'></view>
+        </view>
+    </view>
+    <view class='banner'>
+        <image class='' src='http://www.dlada56.com/images/ban000.png'></image>
+        <view class='movetext'>
+            <text>李**从北京到天津给王**捎带了文件</text>
+        </view>
+    </view>
+    <view class='chosetype'>
+        <view class='chosecon'>
+            <view bindtap='cargoButton'>
+                <image class='iconfont icon-huowu'></image>
+                <text>我要发货</text>
+            </view>
+            <view class='line'></view>
+            <view bindtap='carryButton'>
+                <image class='iconfont icon-motuopeisong'></image>
+                <text>我要捎货</text>
+            </view>
+        </view>
+    </view>
+    <view class='menutit'>
+        <view>进行中
+            <text> ING</text>
+        </view>
+        <view> 事项</view>
+    </view>
+    <view class='list'>
+        <view class='commontit'>
+            我发的单
+        </view>
+        <view class='listinfor'>
+            <view class='maininfor'>
+                <text class='mark fastmark'>急捎</text>
+                <text class='information'>手机数码/20g</text>
+                <text class='status'>待支付</text>
+            </view>
+            <view class='addressinfor'>
+                <view>
+                    <text>取</text>
+                    <text>北京-通州区</text>
+                </view>
+                <view>
+                    <text>送</text>
+                    <text>延安-嘉兴桥小区22单元</text>
+                </view>
+            </view>
+            <view class='price'>¥
+                <text>85.00</text>
+            </view>
+            <view class='send-time'>预约取件时间段：2017/12/22
+                <text>22：20-22：30</text>
+            </view>
+        </view>
+        <view class='listinfor'>
+            <view class='maininfor'>
+                <text class='mark'>普捎</text>
+                <text class='information'>手机数码/20g</text>
+                <text class='status'>待取件</text>
+            </view>
+            <view class='addressinfor'>
+                <view>
+                    <text>取</text>
+                    <text>北京-通州区</text>
+                </view>
+                <view>
+                    <text>送</text>
+                    <text>延安-嘉兴桥小区22单元那然色布斯台音布拉格那然色布斯台音布拉格</text>
+                </view>
+            </view>
+            <view class='send-time'>预约取件时间段：2017/12/22
+                <text>22：20-22：30</text>
+            </view>
+            <view class='send-time'>最晚送达时间：2017/12/22
+                <text>22：22</text>
+            </view>
+        </view>
+    </view>
+    <view class='list'>
+        <view class='commontit'>
+            我接的单
+        </view>
+        <view class='listinfor'>
+            <view class='maininfor'>
+                <text class='mark fastmark'>急捎</text>
+                <text class='information'>手机数码/20g</text>
+                <text class='status'>待支付</text>
+            </view>
+            <view class='addressinfor'>
+                <view>
+                    <text>取</text>
+                    <text>北京-通州区</text>
+                </view>
+                <view>
+                    <text>送</text>
+                    <text>延安-嘉兴桥小区22单元</text>
+                </view>
+            </view>
+            <view class='price'>¥
+                <text>85.00</text>
+            </view>
+            <view class='send-time'>预约取件时间段：2017/12/22
+                <text>22：20-22：30</text>
+            </view>
+        </view>
+        <view class='listinfor'>
+            <view class='maininfor'>
+                <text class='mark'>普捎</text>
+                <text class='information'>手机数码/20g</text>
+                <text class='status'>待取件</text>
+            </view>
+            <view class='addressinfor'>
+                <view>
+                    <text>取</text>
+                    <text>北京-通州区</text>
+                </view>
+                <view>
+                    <text>送</text>
+                    <text>延安-嘉兴桥小区22单元那然色布斯台音布拉格</text>
+                </view>
+            </view>
+            <view class='send-time'>预约取件时间段：2017/12/22
+                <text>22：20-22：30</text>
+            </view>
+            <view class='send-time'>最晚送达时间：2017/12/22
+                <text>22：22</text>
+            </view>
+        </view>
+    </view>
+    <view class='list'>
+        <view class='commontit'>
+            行程
+        </view>
+        <view class='listinfor orderinfor'>
+            <view class='send-time order-time'>预约取件时间段：2017/12/22
+                <text>22：20-22：30</text>
+            </view>
+            <view class='order-address'>
+                <view>北京-通州区 > 延安-嘉兴桥小区22单元</view>
+            </view>
+			<image class='iconfont icon-dayuhao'></image>
+        </view>
+    </view>
+</view>

@@ -1,1 +1,271 @@
 /* pages/index/index.wxss */
+
+.container {
+    width: 100%;
+    background: #ededed;
+}
+
+.nav {
+    background: #fff;
+}
+
+.banner {
+    width: 100%;
+    height: 430rpx;
+    position: relative;
+}
+
+.banner image {
+    width: 100%;
+    height: 430rpx;
+    z-index: 1;
+}
+
+.banner .movetext {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20rpx;
+    font-size: 30rpx;
+    color: #333;
+    line-height: 60rpx;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.chosetype {
+    width: 100%;
+    margin-bottom: 26rpx;
+}
+
+.chosecon {
+    width: 90%;
+    height: 234rpx;
+    margin: 26rpx auto 0;
+    background: #fff;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chosecon view {
+    text-align: center;
+}
+
+.chosecon image {
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 50%;
+    background: linear-gradient(#00b8fc, #0092f8);
+    display: block;
+    margin: auto;
+}
+
+.chosecon view:nth-child(1) image {
+    background: linear-gradient(#fbaa11, #fd6c1d);
+    box-shadow: 0rpx 2rpx 4rpx #fbaa11;
+}
+
+.chosecon text {
+    font-size: 30rpx;
+    font-weight: 600;
+}
+
+.chosecon .line {
+    width: 0rpx;
+    height: 100rpx;
+    border-left: 2rpx solid #ededed;
+    margin: auto 100rpx;
+}
+
+.menutit {
+    width: 100%;
+    height: 120rpx;
+    background: #fff;
+    margin: auto auto 3rpx;
+    text-align: center;
+}
+
+.menutit view {
+    color: f496ac;
+    font-size: 32rpx;
+    font-weight: 600;
+    display: block;
+    line-height: 40rpx;
+    margin: auto;
+}
+
+.menutit view:nth-child(1) {
+    font-style: italic;
+    color: #f5527d;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff004b), to(#fa2c66));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Microsoft YaHei';
+    padding-top: 20rpx;
+    border-bottom: 2rpx solid;
+    width: 22%;
+}
+
+.menutit view:nth-child(2) {
+    color: #f5527d;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#f83a6e), to(#f496ac));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-indent: 13%;
+}
+
+.menutit view text {
+    line-height: 40rpx;
+    font-size: 20rpx;
+}
+
+.list {
+    width: 100%;
+    background: #fff;
+}
+
+.commontit {
+    text-indent: 6%;
+    width: 100%;
+    margin: auto;
+    font-size: 30rpx;
+    padding-top: 24rpx;
+    font-weight: 600;
+}
+
+.listinfor {
+    width: 90%;
+    margin: auto;
+    border-radius: 10rpx;
+    border: 1px solid #ededed;
+    margin-top: 24rpx;
+    padding-bottom: 20rpx;
+    box-shadow: 2rpx 2rpx 4rpx #ededed;
+}
+
+.listinfor .maininfor {
+    margin: 19rpx 0 0 22rpx;
+}
+
+.listinfor .mark {
+    font-size: 20rpx;
+    border-radius: 20rpx;
+    line-height: 24rpx;
+    padding: 2rpx 10rpx;
+    background: #e5f5e5;
+    color: #1cbc9c;
+    border: #1cbc9c solid 2rpx;
+    margin-right: 9rpx;
+    vertical-align: middle;
+}
+
+.listinfor .fastmark {
+    background: #f8eade;
+    color: #f86418;
+    border: #f86418 solid 2rpx;
+}
+
+.information {
+    font-size: 30rpx;
+    line-height: 30rpx;
+    font-weight: 600;
+}
+
+.status {
+    font-size: 26rpx;
+    line-height: 30rpx;
+    float: right;
+    margin: 10rpx 22rpx auto auto;
+    color: #444;
+}
+
+.addressinfor {
+    width: 91%;
+    margin: 20rpx auto 0;
+    color: #666;
+    font-size: 24rpx;
+}
+
+.addressinfor view {
+    margin-bottom: 14rpx;
+    line-height: 30rpx;
+    x-overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.addressinfor view text {
+    border-radius: 50%;
+    padding: 4rpx;
+    color: #333;
+    font-size: 16rpx;
+    line-height: 16rpx;
+    margin-right: 7rpx;
+}
+
+.addressinfor view:nth-child(1) text:nth-child(1) {
+    border: #669ff2 solid 1rpx;
+    background: #adcdfc;
+    color: #fff;
+}
+
+.addressinfor view text:nth-child(2) {
+    font-size: 24rpx;
+}
+
+.addressinfor view:nth-child(2) text:nth-child(1) {
+    border: #24b27b solid 2rpx;
+    background: #8ee3c2;
+    color: #fff;
+}
+
+.listinfor .price {
+    width: 90%;
+    margin: 0 auto 10rpx;
+    color: #f86418;
+    font-size: 24rpx;
+    line-height: 30rpx;
+}
+
+.listinfor .price text {
+    font-size: 40rpx;
+    line-height: 40rpx;
+}
+
+.send-time {
+    width: 90%;
+    margin: 0 auto 10rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.send-time text {
+    margin-left: 16rpx;
+}
+
+.order-time {
+    line-height: 90rpx;
+}
+
+.order-address {
+    width: 90%;
+    margin: 0 auto 24rpx;
+    color: #666;
+    font-size: 24rpx;
+}
+
+.orderinfor {
+    margin-bottom: 100rpx;
+	position: relative;
+}
+.orderinfor image{
+	position: absolute;
+	right: 20rpx;
+	top: 70rpx;
+	width: 60rpx;
+	height: 60rpx;
+}

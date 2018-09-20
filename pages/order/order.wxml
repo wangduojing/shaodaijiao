@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-    <view class='nav'>
+    <view class='common-nav'>
         <view class='iconfont icon-user'></view>
         <view class='gps-city' bindtap='choseCity'>
             北京市

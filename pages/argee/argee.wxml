@@ -1,4 +1,8 @@
 <!--pages/argee.wxml-->
+ <view class='common-nav'>
+        <view class='iconfont icon-user'></view>
+        <view class='iconfont icon-bars'></view>
+</view>
 <text>注册协议</text>
 <view class='contain'>
     <view>注册协议（以下简称"本协议”）系用户因使用捎带脚平台的各项服务而与捎带脚平台订立的正式的协议，本协议采用电子合同形式，在用户与捎带脚平台间具有《中华人民共和国合同法》上的效力。

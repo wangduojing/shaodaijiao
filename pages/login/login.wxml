@@ -2,6 +2,10 @@
 
 
 <view class='contain'>
+    <view class='common-nav'>
+        <view class='iconfont icon-user'></view>
+        <view class='iconfont icon-bars'></view>
+    </view>
 	<view class='logintype'>
 		<view class="{{active ? 'base_bordercolor':''}}" bindtap='hasAccount'>账号登录</view>
 		<view class="{{active ? '':'base_bordercolor'}}" bindtap='noAccount'>手机号快捷登录</view>
