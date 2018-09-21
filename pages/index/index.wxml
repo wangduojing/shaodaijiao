@@ -7,10 +7,17 @@
         </view>
     </view>
     <view class='banner'>
-        <image class='' src='http://www.dlada56.com/images/ban000.png'></image>
-        <view class='movetext'>
-            <text>李**从北京到天津给王**捎带了文件</text>
-        </view>
+		<swiper class='carousel' indicator-dots indicator-color='#fff' indicator-active-color="#fd6c1d" autoplay circular>
+			<swiper-item>
+				<image src='http://www.dlada56.com/images/ban000.png'></image>
+			</swiper-item>
+			<swiper-item>
+				<image src='http://www.dlada56.com/images/ban111.jpg'></image>
+			</swiper-item>
+		</swiper>       
+        <swiper class='movetext' autoplay interval="2000" duration="1000" circular>
+            <swiper-item wx:for="{{marquee}}">{{item}}</swiper-item>
+        </swiper>
     </view>
     <view class='chosetype'>
         <view class='chosecon'>
@@ -144,7 +151,7 @@
             <view class='order-address'>
                 <view>北京-通州区 > 延安-嘉兴桥小区22单元</view>
             </view>
-			<image class='iconfont icon-dayuhao'></image>
+            <image class='iconfont icon-dayuhao'></image>
         </view>
     </view>
 </view>
