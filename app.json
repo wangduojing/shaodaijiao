@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/publish/trip/pulish_trip",
         "pages/index/index",
         "pages/order/order",
         "pages/login/login",
@@ -9,7 +10,6 @@
         "pages/sendinfor/sendinfor",
         "pages/logs/logs",
         "pages/auth/auth",
-        "pages/publish/trip/pulish_trip",
         "pages/publish/trip/trip_list",
         "pages/publish/trip/trip_detail",
         "pages/publish/trip/cargo_list",

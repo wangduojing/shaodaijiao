@@ -1,2 +1,26 @@
 <!--pages/publish/trip/pulish_trip.wxml-->
-<text>pages/publish/trip/pulish_trip.wxml</text>
+<view class='container'>
+	 <view class='star-end'>
+        <view class='star'>
+            <icon class='iconfont icon-qidian'></icon>
+            <text bindtap='sendinfor'>出发地</text>
+        </view>
+        <view class='star end'>
+            <icon class='iconfont icon-zhongdian'></icon>
+            <text>目的地</text>
+        </view>
+    </view>
+	<view class='star-time'>
+        <icon class='iconfont must-infor'>*</icon>
+        <text>出发时间：</text>
+        <image class='iconfont icon-dayuhao'></image>
+    </view>
+	<view class='tool star-time'>
+        <text>交通工具：</text>
+        <image class='iconfont icon-dayuhao'></image>
+    </view>
+	<view class='tool star-time'>
+        <text>备注说明：</text>
+        <input type='text'></input>
+    </view>
+</view>
