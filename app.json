@@ -1,20 +1,24 @@
 {
     "pages": [
-        "pages/publish/trip/pulish_trip",
-        "pages/index/index",
+		"pages/publish/cargo/fastpublish",
+		"pages/publish/cargo/generalpublish",
         "pages/order/order",
+        "pages/index/index",
+        "pages/address/address",
+        "pages/publish/trip/trip_detail",
+        "pages/publish/trip/pulish_trip",
+        "pages/sendinfor/sendinfor",
         "pages/login/login",
         "pages/argee/argee",
         "pages/register/register",
         "pages/register/success/registersuccess",
-        "pages/sendinfor/sendinfor",
         "pages/logs/logs",
         "pages/auth/auth",
         "pages/publish/trip/trip_list",
-        "pages/publish/trip/trip_detail",
         "pages/publish/trip/cargo_list",
         "pages/publish/trip/cargo_detail",
         "pages/publish/trip/canorder_list"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",

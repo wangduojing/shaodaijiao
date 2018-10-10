@@ -75,7 +75,7 @@ Page({
 	 */
 	cargoButton: function () {
 		wx.navigateTo({
-			url: "../publish/trip/trip_list",
+			url: "../order/order",
 		})
 	},
 	carryButton: function () {

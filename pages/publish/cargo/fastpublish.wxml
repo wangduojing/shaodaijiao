@@ -1,0 +1,71 @@
+<!--pages/publish/cargo/fastpublish.wxml-->
+<!--order.wxml-->
+<view class="container">
+    <view class='chose'>
+        <view class='sdj-fast'>
+			<text>急捎</text>
+		</view>
+		<view class='chose-line'></view>
+        <view class='sdj-general'>
+			<text>普通捎</text>
+		</view>
+    </view>
+    <view class='star-end'>
+        <view class='star'>
+            <view><view class='starpoint'></view><text>发件人信息</text></view>
+            <input bindtap='sendinfor' placeholder='点击添加发件人信息' placeholder-class='plhcolor'></input>
+			<image class='iconfont icon-dayuhao'></image>
+        </view>
+        <view class='star end'>
+            <view><view class='endpoint'></view><text>收件人信息</text></view>
+			<input bindtap='sendinfor' placeholder='点击添加收件人信息' placeholder-class='plhcolor'></input>
+			<image class='iconfont icon-dayuhao'></image>
+        </view>
+    </view>
+	<view class='fullin-infor'>
+        <icon class='iconfont must-infor'>*</icon>
+        <text>预约收件时间段</text>
+		<image class='iconfont icon-dayuhao'></image>
+		<input value='12月25日  22：20 -  22：30'></input>    
+    </view>
+	<view class='bottom-line'></view>
+	<view class='fullin-infor'>
+        <text>最晚送达时间</text>
+		<image class='iconfont icon-dayuhao'></image>
+		<input value='12月25日  22：20 -  22：30'></input>    
+    </view>
+	<view class='bottom-line'></view>
+   <view class='fullin-infor'>
+        <icon class='iconfont must-infor'>*</icon>
+        <text>物品信息</text>
+        <image class='iconfont icon-dayuhao'></image>
+    </view>
+	<view class='bottom-line'></view>
+    <view class='thankfee'>
+        <text>感谢费</text>
+        <image class='iconfont'></image>
+        <input type='number' placeholder-class='plhcolor' placeholder='可以更快被抢单哦 '></input>
+    </view>
+	<view class='bottom-line'></view>
+    <view class='thankfee remark'>
+        <text>捎话</text>
+        <image class='iconfont icon-dayuhao'></image>
+		<input value='价格好商量，快点来接单快点来接单快点来接单快点来'></input>
+    </view>
+	<view class='fullin-infor tool'style='font-size:24rpx;'>
+		<view>
+			<icon class='iconfont must-infor'>*</icon>
+			<text>配送工具</text>
+		</view>
+		<swiper circular display-multiple-items="5" style='width:90%;height:100rpx;overflow:auto;margin:auto;'>			
+			<radio-group class="radio-group" bindchange="radioChange" >					
+				<label class="radio" wx:for="{{items}}">
+					<swiper-item>
+						<radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+					</swiper-item>
+				</label>					
+			</radio-group>	
+		</swiper>
+	</view>
+    <button>立即下单</button>
+</view>

@@ -1,0 +1,105 @@
+/* pages/address/address.wxss */
+page{
+	background: #eee;
+}
+.container{
+	width: 100%;
+}
+.search{
+	width: 100%;
+	height: 80rpx;
+	margin: auto;
+	padding: 10rpx 0 0;
+	background: #f9f9f9;
+	
+	font-size: 26rpx;
+}
+.searchcon{
+	position: relative;
+	width: 84%;
+	line-height: 60rpx;
+	margin: 0 0 0 4%;	
+	background: #fff;
+	overflow: hidden;
+	border-radius: 4px;
+	color: #333;
+	box-shadow: 2px 2px 2px #eee;
+}
+.search .searchcon view,
+.search text,
+.search input,
+.search icon{
+	float: left;
+}
+.search text{
+	margin-left: 40rpx;
+}
+.search view{
+	background: #fff;
+}
+.search view icon{
+	margin: -6rpx 20rpx 0 10rpx;
+}
+.search input{
+	height: 60rpx;
+	color: #000;
+	font-size: 24rpx;
+}
+.icon-quxiao{
+	position: absolute;
+	top: 14rpx;
+	right: 30rpx;
+}
+.address-information{
+	width: 90%;
+	height: 1000rpx;
+	margin: 20rpx auto;
+	background: #fff;
+	border-radius: 4rpx;	
+}
+.address-information icon{
+	float: left;
+	width: 10%;
+	text-align: center;
+	margin-top: 20rpx;
+}
+.address-information .address-infor{
+	float: left;
+	width: 90%;
+	border-bottom: 2rpx solid #f2f2f1;
+	font-size: 26rpx;
+	margin: 20rpx 0 0 0;
+	padding-bottom: 10rpx;
+}
+.address-information view text{
+	display: block;
+	width: 86%;
+	line-height: 36rpx;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+}
+.address-information view text:nth-child(2){
+	color: #999;
+}
+.address-list{
+	position: relative;
+	overflow:hidden;
+}
+.address-information button{
+	width: 86rpx;
+	padding: 0 20rpx;
+	line-height: 38rpx;
+	text-align: center;
+	font-size: 18rpx;
+	color: #fff;
+	border-radius: 20rpx;
+	position: absolute;
+	top: 34rpx;
+	right: 20rpx;
+}
+.history-bth{
+	background: #999;
+}

@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--order.wxml-->
 <view class="container">
     <view class='common-nav'>
         <view class='iconfont icon-user'></view>

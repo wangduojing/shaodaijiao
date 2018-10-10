@@ -147,5 +147,4 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 .icon-mimakejian{
 	z-index: 4;
 	width:50rpx;
-
 }
