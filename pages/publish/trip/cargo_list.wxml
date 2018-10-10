@@ -1,2 +1,55 @@
 <!--pages/publish/trip/cargo_list.wxml-->
-<text>pages/publish/trip/cargo_list.wxml</text>
+<view>
+	<view class='to_publish'>
+		<view class='to_publish_left'>
+			自己找嫌麻烦，想系统自动匹配，去<text style='color: #FF6600'>发布行程</text>吧~
+		</view>
+		<view class='to_publish_right'>
+			<image class='iconfont icon-yezi'></image>
+		</view>
+	</view>
+	<view class='cargo_item_body' wx:for='{{cargoList}}'>
+		<view class='cargo_item_division'></view>
+		<view class='cargo_item'>
+			<view class='item_head'>
+				<view class='item_head_left'>
+					<view class='item_head_left_left'>
+						<image class='iconfont icon-yezi'></image>
+					</view>
+					<view class='item_head_left_right'>
+						<view>{{item.pcSenderName}}</view>
+						<view><image></image></view>
+						<view>{{item.pcTimePublish.slice(0, 19)}} 发布</view>
+					</view>
+				</view>
+				<view class='item_head_right'>
+					<image class='iconfont icon-yezi'></image>
+				</view>
+				<!-- <view></view> -->
+			</view>
+			<view class='item_body'>
+				<view>
+					<image class='iconfont icon-yezi'></image>
+					<text>{{item.pcGoodsType}}/{{item.pcGoodsWeight}}kg</text>
+				</view>
+				<view>
+					<image class='iconfont icon-yezi'></image>
+					<text>{{item.pcSenderProvince}}-{{item.pcSenderCity}}</text>
+				</view>
+				<view>
+					<image class='iconfont icon-yezi'></image>
+					<text>{{item.pcConsigneeProvince}}-{{item.pcConsigneeCity}}</text>
+				</view>
+				<view>
+					<text>预约取件时间段：</text>
+					<text>{{item.pcOrderEarliest}}-{{item.pcOrderLatest}}</text>
+				</view>
+			</view>
+			<view class='item_bottom'>
+				<view class='item_bottom_left'></view>
+				<view class='item_bottom_right'></view>
+			</view>
+			<view class='to_publish_bottom'></view>
+		</view>
+	</view>
+</view>

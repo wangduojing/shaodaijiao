@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+	  cargoList: []
   },
 
   /**
@@ -19,7 +19,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+	  var request = require('../../../utils/request')
+	  request.cargo_list("{'pageSize': 10, 'currentPage': 1}").then(resData => {
+		  console.log(resData);
+		  this.setData({
+			  cargoList: resData.data.resBodyDto.carryCargoList//把数据赋值给contactList
+		  })
+	  });
   },
 
   /**
