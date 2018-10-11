@@ -1,9 +1,9 @@
 {
     "pages": [
+        "pages/index/index",
 		"pages/publish/cargo/fastpublish",
 		"pages/publish/cargo/generalpublish",
         "pages/order/order",
-        "pages/index/index",
         "pages/address/address",
         "pages/publish/trip/trip_detail",
         "pages/publish/trip/pulish_trip",

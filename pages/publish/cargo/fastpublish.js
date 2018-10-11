@@ -72,9 +72,25 @@ Page({
 
   },
   /**
+   * title急捎普捎页面跳转
+   */
+	generalpublish:function(){
+		wx.redirectTo({
+			url: 'generalpublish',
+		})
+	},
+  /**
    * 配送工具radio
    */
 	radioChange: function (e) {
 		console.log('radio发生change事件，携带value值为：', e.detail.value)
+	},
+	/**
+	 * 发件人信息跳转
+	 */
+	sendinfor:function(){
+		wx.redirectTo({
+			url: '../../sendinfor/sendinfor',
+		})
 	}
 })

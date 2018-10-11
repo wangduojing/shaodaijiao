@@ -201,21 +201,25 @@ icon.must-infor {
 	display: block;
 	clear: both;
 }
+.tool text{
+	font-size: 28rpx;
+}
 .tool radio .wx-radio-input{/*radio改变样式-未选择*/
 	border-radius: 4rpx;
 	height: 26rpx;
 	width: 26rpx;
 	margin-top: -4rpx;
+	color: #1cbc9c;
 }
 .tool radio .wx-radio-input.wx-radio-input-checked::before{/*radio改变样式-选中*/
-	background-color: #ff6c24;
-	border: 2rpx solid #ff6c24;
+	background-color: #1cbc9c;
+	border: 2rpx solid #1cbc9c;
 	height: 38rpx;
 	width: 38rpx;
 	border-radius: 4rpx;
 }
-.tool radio .wx-radio-input.wx-radio-input-checked{
-	color: #ff6c24;
+.tool radio:checked+swiper-item text{
+	color: #1cbc9c;
 }
 button {
     width: 90%;
