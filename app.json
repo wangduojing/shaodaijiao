@@ -1,9 +1,10 @@
 {
     "pages": [
+        "pages/publish/trip/cargo_list",
+        "pages/index/index",
 		"pages/publish/cargo/fastpublish",
 		"pages/publish/cargo/generalpublish",
         "pages/order/order",
-        "pages/index/index",
         "pages/address/address",
         "pages/publish/trip/trip_detail",
         "pages/publish/trip/pulish_trip",
@@ -15,7 +16,6 @@
         "pages/logs/logs",
         "pages/auth/auth",
         "pages/publish/trip/trip_list",
-        "pages/publish/trip/cargo_list",
         "pages/publish/trip/cargo_detail",
         "pages/publish/trip/canorder_list"
         

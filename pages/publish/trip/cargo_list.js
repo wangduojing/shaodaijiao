@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-	  cargoList: []
+	  cargoList: [],
+	  publishType:['普通捎', '急捎']
   },
 
   /**
