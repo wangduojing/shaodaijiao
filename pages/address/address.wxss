@@ -52,7 +52,6 @@ page{
 }
 .address-information{
 	width: 90%;
-	height: 1000rpx;
 	margin: 20rpx auto;
 	background: #fff;
 	border-radius: 4rpx;	

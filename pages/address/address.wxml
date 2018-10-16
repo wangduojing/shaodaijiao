@@ -5,20 +5,22 @@
 			<view>
 				<text>北京</text>
 				<icon class='iconfont icon-xiala1'></icon>
-				<input placeholder='请输入发件地址' value='{{searchValue}}' bindtap="nearby_search"></input>
+				<!-- <input placeholder='请输入发件地址' value='{{searchValue}}' bindtap="nearby_search"></input> -->
+				<input type='text' value='{{searchValue}}' bindinput="bindKeyInput" placeholder='请输入发件地址' confirm-type="search" maxlength="100" bindconfirm="clickSearch" bindfocus="clickSearchView" bindblur="loseInputBlur" focus="true"/>
+    <!-- <button bindtap="clickSearch" hover-class="btnClick">搜索</button> -->
 			</view>	
 		</view>
 		<icon bindtap='clearValue' class='iconfont icon-quxiao'></icon>
 	</view>
 	<view class='address-information'>
-		<view wx:for='{{address}}' class='address-list'>
+		<view wx:for='{{address}}' class='address-list' bindtap='didSelectCell'>
 			<icon class='iconfont icon-dingwei001'></icon>
 			<view class='address-infor'>
-				<text>{{markers.addressTitle}}</text>
-				<text>{{item.addressInformation}}</text>
+				<text>{{item.title}}</text>
+				<text>{{item.address}}</text>
 			</view>	
-			<button class='always-btn'>常用</button>	
-			<!--    <button class='history-bth'>历史</button>	  -->
+			<!-- <button class='always-btn'>常用</button>	 -->
+			<!-- <button class='history-bth'>历史</button>	  -->
 		</view>
 		
 	</view>
