@@ -1,1 +1,230 @@
 /* pages/publish/cargo/general.wxss */
+.container {
+    width: 100%;
+}
+
+.chose {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 4rpx solid #f5f5f5;
+    border-bottom: 16rpx solid #f5f5f5;
+    font-size: 28rpx;
+}
+
+.sdj-fast {
+	width: 49%;
+    color: #333;
+    text-align: center;
+    
+}
+
+.sdj-general {
+    width: 49%;
+    color: #ff9800;
+    text-align: center;
+}
+
+.sdj-general text {
+    padding: 20rpx 34rpx;
+    border-bottom: 4rpx solid #ff9800;
+}
+
+.chose-line {
+    height: 40rpx;
+    border-right: 2rpx solid #f5f5f5;
+}
+
+.star-end {
+    color: #aaa;
+    font-size: 28rpx;
+}
+
+.star {
+    border-bottom: 4rpx solid #f5f5f5;
+    margin-top: 20rpx;
+    padding-bottom: 17rpx;
+    position: relative;
+}
+
+.star view {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.star input {
+    margin-left: 50rpx;
+    line-height: 78rpx;
+}
+
+.star view text {
+    margin-left: 0rpx;
+    line-height: 64rpx;
+}
+
+.star view .starpoint, .end .endpoint {
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 20rpx;
+    margin: 24rpx 9rpx 0 32rpx;
+    background: #f59c12;
+    float: left;
+}
+
+.end .endpoint {
+    background: #8ac306;
+}
+
+.star-end icon {
+    padding: 0 2.2%;
+    margin: 20rpx 20rpx 20rpx 0;
+    font-size: 36rpx;
+    vertical-align: sub;
+}
+
+.end {
+    border-bottom: 18rpx solid #f5f5f5;
+}
+
+.star image {
+    width: 32rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 58rpx;
+}
+
+.icon-dayuhao:before {
+    color: #dedede;
+}
+
+.fullin-infor {
+    font-size: 28rpx;
+    line-height: 90rpx;
+    height: 90rpx;
+}
+
+icon.must-infor {
+    color: #ff6c24;
+    margin: 6rpx 6rpx 0 20rpx;
+    font-size: 26rpx;
+    float: left;
+}
+
+.fullin-infor text {
+    color: #333;
+    float: left;
+	margin-left: 38rpx;
+}
+
+.fullin-infor image {
+    width: 32rpx;
+    height: 90rpx;
+    font-size: 28rpx;
+    float: right;
+    margin-right: 20rpx;
+}
+
+.fullin-infor input {
+    line-height: 90rpx;
+    height: 90rpx;
+    float: right;
+    width: 400rpx;
+    color: #666;
+    text-align: right;
+    margin-right: 10rpx;
+}
+
+.thankfee {
+    font-size: 28rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+
+.thankfee text {
+    color: #333;
+    float: left;
+	margin-left: 38rpx;
+}
+
+.thankfee input {
+    line-height: 90rpx;
+    color: #999;
+    font-size: 24rpx;
+    float: right;
+    margin-top: 16rpx;
+    text-align: right;
+}
+
+.thankfee image {
+    width: 32rpx;
+    height: 90rpx;
+    font-size: 28rpx;
+    float: right;
+    margin-right: 20rpx;
+}
+
+.protect-price {
+    border-bottom: 1rpx solid #f5f5f5;
+}
+.remark{
+	border-bottom: 16rpx solid #f5f5f5;
+}
+.remark text {
+    margin-left: 38rpx;
+}
+
+.remark input {
+    width: 560rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.plhcolor{
+	color: #999;
+}
+.bottom-line{
+	width: 92%;
+	margin: auto;
+	border-bottom:2rpx solid #f5f5f5;
+}
+.tool {
+	height: 200rpx;
+	width: 100%;
+    border-bottom: 108rpx solid #f5f5f5;
+}
+.radio-group{
+	display: block;
+	clear: both;
+}
+.tool radio .wx-radio-input{/*radio改变样式-未选择*/
+	border-radius: 4rpx;
+	height: 26rpx;
+	width: 26rpx;
+	margin-top: -4rpx;
+}
+.tool radio .wx-radio-input.wx-radio-input-checked::before{/*radio改变样式-选中*/
+	background-color: #ff6c24;
+	border: 2rpx solid #ff6c24;
+	height: 38rpx;
+	width: 38rpx;
+	border-radius: 4rpx;
+}
+.tool radio .wx-radio-input.wx-radio-input-checked{
+	color: #ff6c24;
+}
+button {
+    width: 90%;
+    border: 0;
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 24rpx;
+    line-height: 90rpx;
+    margin: 20rpx auto 10rpx;
+}

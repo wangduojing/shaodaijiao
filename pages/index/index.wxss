@@ -195,21 +195,21 @@
 
 .addressinfor view {
     margin-bottom: 14rpx;
-    line-height: 30rpx;
-    
+    line-height: 38rpx;
+    width: 470rpx;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.addressinfor view text {
-	width: 270rpx;
+.addressinfor view text {	
     border-radius: 50%;
     padding: 4rpx;
     color: #333;
     font-size: 16rpx;
     line-height: 16rpx;
     margin-right: 7rpx;
-	overflow-x: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	
 }
 
 .addressinfor view:nth-child(1) text:nth-child(1) {

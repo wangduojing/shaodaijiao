@@ -15,7 +15,7 @@
 				<image src='http://www.dlada56.com/images/ban111.jpg'></image>
 			</swiper-item>
 		</swiper>       
-        <swiper class='movetext' autoplay interval="2000" duration="1000" circular>
+        <swiper class='movetext' autoplay interval="2000" duration="1000" circular vertical="false">
             <swiper-item wx:for="{{marquee}}">{{item}}</swiper-item>
         </swiper>
     </view>
