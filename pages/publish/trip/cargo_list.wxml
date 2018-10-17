@@ -2,7 +2,7 @@
 <view>
 	<view class='to_publish'>
 		<view class='to_publish_left'>
-			自己找嫌麻烦，想系统自动匹配，去<text style='color: #FF6600'>发布行程</text>吧~
+			自己找嫌麻烦，想系统自动匹配，去<text style='color: #FF6600' bindtap='to_publish'>发布行程</text>吧~
 		</view>
 		<view class='to_publish_right'>筛选</view>
 	</view>
@@ -13,7 +13,7 @@
 				<view class='item_header_left'><image src='https://mb.dlada56.com/common/dlImage?src={{item.pcShipperHeader}}'></image></view>
 				<view class='item_header_center'>
 					<view class='item_header_center_top'>{{item.pcSenderName}}</view>
-					<view class='item_header_center_center'>{{item.pcShipperStatus}}</view>
+					<view class='item_header_center_center iconfont icon-shimingrenzheng'></view>
 					<view class='item_header_center_bottom'>{{item.pcTimePublish}} 发布</view>
 				</view>
 				<view class='item_header_right'></view>
@@ -21,8 +21,10 @@
 			<view class='cargo_item_line'></view>
 			<view class='cargo_item_body'>
 				<view class='item_body_one'>
-					<view class="{{item.pcType == 1 ? 'item_body_one_left_p' : 'item_body_one_left_j'}}">{{publishType[item.pcType - 1]}}</view>
-					<view class='item_body_one_right'></view>
+					<view class="{{publishTypeClass[item.pcType]}}">{{publishType[item.pcType]}}</view>
+					<view class='item_body_one_right'>
+						{{publishFileType[item.pcGoodsType]}}/{{item.pcGoodsWeight}}公斤以下
+					</view>
 				</view>
 				<view class='item_body_two'>
 					<view class='item_body_two_left'>取</view>
@@ -37,12 +39,12 @@
 					</view>
 				</view>
 				<view class='item_body_for'>
-					预约取件时间段：{{item.pcOrderEarliest}}
+					预约取件时间段：{{item.pcOrderEarliest}}-{{item.pcOrderLatest}}
 				</view>
 			</view>
 			<view class='cargo_item_bottom'>
-				<view class='item_bottom_left'>￥{{item.pcPriceInsure}} 元</view>
-				<view class='item_bottom_right'></view>
+				<view class='item_bottom_left'>{{item.pcPriceInsure == null ? '' : '￥' + item.pcPriceInsure}}</view>
+				<view class='item_bottom_right' bindtap='click_order' data-item='{{item}}'>{{item.pcType == 1 ? '我要接单' : '抢单'}}</view>
 			</view>
 		</view>
 	</view>

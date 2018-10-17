@@ -101,6 +101,11 @@ page {
 .item_body_one_right {
 	float: left;
 	height: 30rpx;
+	font-size: 28rpx;
+	margin-left: 14rpx;
+	display: flex;
+	align-items: center;
+	font-weight: 900rpx;
 }
 .item_body_two {
 	height: 30rpx;
@@ -164,11 +169,17 @@ page {
 	color: #ff3b55;
 	height: 28rpx;
 	font-size: 28rpx;
-	margin-top: 14rpx;
+	margin-top: 5rpx;
 }
 .item_bottom_right {
 	float: right;
 	color: white;
-	height: 28rpx;
 	font-size: 28rpx;
+	background-color: #1cbc9c;
+	width: 152rpx;
+	height: 52rpx;
+	line-height: 52rpx;
+	text-align: center;
+	border-radius: 25rpx;
+	
 }
