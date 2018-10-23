@@ -1,0 +1,67 @@
+<!--pages/personalcenter/personalcenter.wxml-->
+<view class='contain'>
+	<view class='top'>
+		<view class='personal-img'></view>
+		<button>登录/注册</button>
+	</view>
+	<view class='cargo-trip'>
+		<view class='cargotrip-list'>
+			<view>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				我接的单
+				<icon class='iconfont icon-dayuhao'></icon>
+			</view>
+			<view>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				我发的单
+				<icon class='iconfont icon-dayuhao'></icon>
+			</view>
+			<view class='last'>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				我的行程
+				<icon class='iconfont icon-dayuhao'></icon>
+			</view>
+		</view>		
+	</view>
+	<view class='cargo-trip'>
+		<view class='cargotrip-list accept'>
+			<view>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				实名认证
+				<icon class='iconfont icon-dayuhao'></icon>
+				<text>{{accepttype}}</text>
+			</view>
+			<view>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				支付认证
+				<icon class='iconfont icon-dayuhao'></icon>
+				<text>{{accepttype}}</text>
+			</view>
+			<view class='last'>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				芝麻认证
+				<icon class='iconfont icon-dayuhao'></icon>
+				<text>{{accepttype}}</text>
+			</view>
+		</view>
+	</view>
+	<view class='cargo-trip person-last-list'>
+		<view class='cargotrip-list'>
+			<view>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				我的钱包
+				<icon class='iconfont icon-dayuhao'></icon>
+			</view>
+			<view>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				邀请好友
+				<icon class='iconfont icon-dayuhao'></icon>
+			</view>
+			<view class='last'>
+				<icon class='iconfont icon-yezi-copy'></icon>
+				我的设置
+				<icon class='iconfont icon-dayuhao'></icon>
+			</view>
+		</view>
+	</view>
+</view>

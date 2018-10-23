@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/personalcenter/personalcenter",
         "pages/publish/cargo/goodsinfor",
         "pages/login/login",
         "pages/index/index",
