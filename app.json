@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/index/index",
         "pages/publish/cargo/goodsinfor",
+        "pages/login/login",
+        "pages/index/index",
         "pages/publish/cargo/fastpublish",
         "pages/address/address",
         "pages/publish/trip/cargo_list",
@@ -10,7 +11,6 @@
         "pages/publish/trip/trip_detail",
         "pages/publish/trip/pulish_trip",
         "pages/sendinfor/sendinfor",
-        "pages/login/login",
         "pages/argee/argee",
         "pages/register/register",
         "pages/register/success/registersuccess",

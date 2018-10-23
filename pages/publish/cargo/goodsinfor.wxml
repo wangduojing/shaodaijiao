@@ -1,22 +1,56 @@
 <!--pages/publish/cargo/goodsinfor.wxml-->
-<view class='base_textcolor goods-type commontit'>*<text>物品类型</text></view>
+<view class='base_textcolor goods-type commontit'>*
+    <text>物品类型</text>
+</view>
 <view class='goods-list'>
-	<view wx:for="{{goods_type}}"><view>{{item}}</view></view>
-	<view class='blank'></view>
-	<view class='blank'></view>
+    <view wx:for="{{goods_type}}">
+        {{item}}
+    </view>
+    <view class='blank'></view>
+    <view class='blank'></view>
 </view>
 <view class='border-bg'></view>
 <view class='goods-name commontit'>
-	<text>物品名称</text>	
-	<icon class='iconfont icon-quxiao'></icon>
-	<input></input>
+    <text>物品名称</text>
+    <icon class='iconfont icon-quxiao'></icon>
+    <input></input>
 </view>
 <view class='tip'>提示：根据法律规定，捎货人将对您手机物品进行核实，请暂时不要将外包装封口，感谢您的配合</view>
 <view class='border-bg'></view>
 <view class='goods-name commontit'>物品价值</view>
 <view class='goods-list price'>
-	<view wx:for="{{price}}"><view>{{item}}</view></view>
-	<view>自定义</view>
-	<view class='blank'></view>
-	<view class='blank'></view>
+    <view wx:for="{{price}}">{{item}}</view>
+    <view>自定义</view>
+    <view class='blank'></view>
+    <view class='blank'></view>
+</view>
+<view class='border-bg'></view>
+<view class='base_textcolor goods-face'>*
+    <text>物品重量</text>  
+    <icon class='iconfont icon-dayuhao'></icon>
+	<input value=''></input>
+</view>
+<view class='goods-face goods-v'>
+    <text>物品体积</text>  
+	<view class='chose'>
+		<text>方</text>	
+		<view bindtap='fixed' class="{{active ? 'activestyle' : ''}}">固定</view>
+		<view bindtap='range' class="{{active ? '' : 'activestyle'}}">范围</view>	
+	</view>
+	<view class='goods-v-text'>
+		<view class='hide-range' hidden='{{rangeinput}}'>
+			<input value=''></input>
+			<text>~</text>
+		</view>
+		<input value=''></input>
+	</view>	
+</view>
+<view class='goods-face goods-photo'>
+    <text>物品照片</text>  
+	<view class='click-onload'>
+		<image src='http://www.ada56.com/images/load.png'></image>
+	</view>
+</view>
+<view class='submit'>
+	<button>确定</button>
 </view>
