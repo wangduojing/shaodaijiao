@@ -1,0 +1,22 @@
+<!--pages/publish/cargo/goodsinfor.wxml-->
+<view class='base_textcolor goods-type commontit'>*<text>物品类型</text></view>
+<view class='goods-list'>
+	<view wx:for="{{goods_type}}"><view>{{item}}</view></view>
+	<view class='blank'></view>
+	<view class='blank'></view>
+</view>
+<view class='border-bg'></view>
+<view class='goods-name commontit'>
+	<text>物品名称</text>	
+	<icon class='iconfont icon-quxiao'></icon>
+	<input></input>
+</view>
+<view class='tip'>提示：根据法律规定，捎货人将对您手机物品进行核实，请暂时不要将外包装封口，感谢您的配合</view>
+<view class='border-bg'></view>
+<view class='goods-name commontit'>物品价值</view>
+<view class='goods-list price'>
+	<view wx:for="{{price}}"><view>{{item}}</view></view>
+	<view>自定义</view>
+	<view class='blank'></view>
+	<view class='blank'></view>
+</view>

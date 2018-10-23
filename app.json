@@ -1,11 +1,12 @@
 {
     "pages": [
-        "pages/publish/trip/cargo_list",
         "pages/index/index",
-		"pages/publish/cargo/fastpublish",
-		"pages/publish/cargo/generalpublish",
-        "pages/order/order",
+        "pages/publish/cargo/goodsinfor",
+        "pages/publish/cargo/fastpublish",
         "pages/address/address",
+        "pages/publish/trip/cargo_list",
+        "pages/publish/cargo/generalpublish",
+        "pages/order/order",
         "pages/publish/trip/trip_detail",
         "pages/publish/trip/pulish_trip",
         "pages/sendinfor/sendinfor",
@@ -18,7 +19,6 @@
         "pages/publish/trip/trip_list",
         "pages/publish/trip/cargo_detail",
         "pages/publish/trip/canorder_list"
-        
     ],
     "window": {
         "backgroundTextStyle": "light",

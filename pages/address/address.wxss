@@ -10,8 +10,7 @@ page{
 	height: 80rpx;
 	margin: auto;
 	padding: 10rpx 0 0;
-	background: #f9f9f9;
-	
+	background: #f9f9f9;	
 	font-size: 26rpx;
 }
 .searchcon{
@@ -38,7 +37,7 @@ page{
 	background: #fff;
 }
 .search view icon{
-	margin: -6rpx 20rpx 0 10rpx;
+	margin: 0rpx 20rpx 0 10rpx;
 }
 .search input{
 	height: 60rpx;

@@ -56,8 +56,7 @@ Page({
 		// 调用接口
 		qqmapsdk.search({
 			keyword: function(){
-				keyword:searchValue
-				
+				keyword:searchValue	
 			},
 			success: function (res) {
 				console.log(res);
@@ -189,6 +188,8 @@ Page({
 		// 	delta: 2
 		// })
 
-		console.log("ss")
+
+		console.log("ss");
+
 	}
 })

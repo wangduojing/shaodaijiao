@@ -56,6 +56,8 @@
 
 .icon-shimingrenzheng:before { content: "\e628"; font-size: 84rpx; color: #81dac8}
 
+.icon-shimingrenzheng:before { content: "\e628"; font-size: 84rpx; color: #81dac8;}
+
 .icon-dianhua:before { content: "\e64c"; }
 
 /*1-aliIcon end*/
@@ -83,8 +85,8 @@ button {
 .base_bordercolor{
 	border-color: #1cbc9c;
 }
-/* 公共导航 */
 
+/* 公共导航 */
 .common-nav {
     width: 87%;
 	margin: auto;

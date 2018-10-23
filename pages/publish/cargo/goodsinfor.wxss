@@ -1,0 +1,78 @@
+/* pages/publish/cargo/goodsinfor.wxss */
+.goods-type{
+	line-height: 78rpx;
+}
+.commontit{
+	margin-left: 17rpx;
+	line-height: 78rpx;
+	font-size: 24rpx;
+}
+.goods-type text{
+	color: #333;
+	margin-left: 6px;
+}
+.goods-list{
+	width: 680rpx;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	align-items:center;
+	padding-bottom: 8rpx;
+}
+.goods-list view{
+	width: 154rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	font-size: 22rpx;
+	border-radius: 10rpx;
+	color: #999;
+	text-align: center;
+	margin-bottom: 20rpx;
+}
+.goods-list view view{
+	border: 2rpx solid #edecec;
+}
+.goods-list .blank{
+	border: none;
+}
+.border-bg{
+	border: 15rpx #eee solid;
+}
+.goods-name{
+	margin-left: 36rpx;
+}
+.goods-name input,
+.goods-name icon{
+	float:right;
+	margin-right: 30rpx;
+}
+.goods-name input{
+	width: 490rpx;
+	margin-top:14rpx;
+	margin-right: 5rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.goods-name .icon-quxiao:before{
+	font-size: 30rpx;
+}
+.tip{
+	color: #ff761a;
+	background: #f7e6dc;
+	line-height: 46rpx;
+	font-size: 17rpx;
+	text-align: center;
+}
+.price view{
+	width: 216rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 22rpx;
+	border-radius: 10rpx;
+	color: #999;
+	text-align: center;
+	margin-bottom: 20rpx;
+}
