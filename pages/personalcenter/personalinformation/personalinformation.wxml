@@ -1,0 +1,47 @@
+<!--pages/personalcenter/personalinformation/personalinformation.wxml-->
+<view class='contain'>
+	<view class='personinforlist'>
+		<view>
+		 头像<image src='http://www.ada56.com/images/logo.png'></image>
+		</view>
+		<view>
+		 昵称<input placeholder='请输入昵称' placeholder-class='placeholder-color'></input>
+		</view>
+		<view>
+		 性别<input placeholder='请选择性别' placeholder-class='placeholder-color' bindtap='sexpick' value='{{sexinput}}' bindChange="sexbindchange"></input>
+		</view>
+		<view>
+		 手机号码<input placeholder='请输入手机号码' placeholder-class='placeholder-color'></input>
+		</view>
+		<view>
+		 邮箱<input placeholder='请输入邮箱' placeholder-class='placeholder-color'></input>
+		</view>
+		<view>
+		 年龄<input placeholder='请输入年龄' placeholder-class='placeholder-color'></input>
+		</view>
+		<view>
+		 行业<input placeholder='请输入行业' placeholder-class='placeholder-color'></input>
+		</view>
+		<view>
+		 公司<input placeholder='请输入公司' placeholder-class='placeholder-color'></input>
+		</view>
+		<view>
+		 职业<input placeholder='请输入职业' placeholder-class='placeholder-color'></input>
+		</view>
+	</view>
+	<view class='btn'>
+		<button>保存</button>
+	</view>	
+</view>
+<view class="chose-picker{{showsexpick ? '' : 'hidden'}}">
+	<view class="distpicker-btn">
+        <view class="distpicker-cancel-btn" bindtap="pickerCancel">取消</view>
+        <view class="distpicker-sure-btn" bindtap="pickerSure">确定</view>
+    </view>
+	<picker-view indicator-style="height: 80rpx;" value="{{value}}">
+		<picker-view-column>
+			<view>{{male}}</view>
+			<view>{{female}}</view>
+		</picker-view-column>
+	</picker-view>
+</view>

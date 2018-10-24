@@ -1,12 +1,15 @@
-// pages/personalcenter/personalcenter.js
+// pages/personalcenter/personalinformation/personalinformation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-	  accepttype:["未认证"],
-	  sex: ["♂","♀"]
+	  showsexpick: false,
+	  male:"男",
+	  female:"女",
+	  sexinput:'',
+	  value:[]
   },
 
   /**
@@ -65,11 +68,31 @@ Page({
 
   },
   /**
-   * 跳转个人资料页面
+   * 点击选择性别
    */
-	personalinformation:function(){
-		wx.redirectTo({
-			url: 'personalinformation/personalinformation',
+	sexpick:function(){
+		this.setData({
+			showsexpick: true,
+		})
+	},
+	/**
+	 * pick的确定取消
+	 */
+	pickerCancel:function(){
+		showsexpick:false
+	},
+	pickerSure:function(e){	
+		console.log(e.detail)	
+		// var val = e.detail.value
+		// this.setData({
+		// 	sexinput: this.data.value[val[0]],
+		// })
+	},
+	sexbindchange:function(e){
+		var val = e.detail.value
+		this.setData({
+			sexinput: this.data.value[val[0]],
 		})
 	}
+
 })
