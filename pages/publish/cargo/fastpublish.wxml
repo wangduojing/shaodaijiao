@@ -13,12 +13,12 @@
     <view class='star-end'>
         <view class='star'>
             <view><view class='starpoint'></view><text>发件人信息</text></view>
-            <input disabled bindtap='sendinfor' placeholder='点击添加发件人信息' placeholder-class='plhcolor'></input>
+            <input disabled bindtap='sendinfor' placeholder='点击添加发件人信息' placeholder-class='plhcolor'/>
 			<image class='iconfont icon-dayuhao'></image>
         </view>
         <view class='star end'>
             <view><view class='endpoint'></view><text>收件人信息</text></view>
-			<input disabled bindtap='sendinfor' placeholder='点击添加收件人信息' placeholder-class='plhcolor'></input>
+			<input disabled bindtap='sendinfor' placeholder='点击添加收件人信息' placeholder-class='plhcolor'/>
 			<image class='iconfont icon-dayuhao'></image>
         </view>
     </view>
@@ -26,13 +26,13 @@
         <icon class='iconfont must-infor'>*</icon>
         <text>预约收件时间段</text>
 		<image class='iconfont icon-dayuhao'></image>
-		<input value='12月25日  22：20 -  22：30'></input>    
+		<input value='12月25日  22：20 -  22：30'/>    
     </view>
 	<view class='bottom-line'></view>
 	<view class='fullin-infor'>
         <text>最晚送达时间</text>
 		<image class='iconfont icon-dayuhao'></image>
-		<input value='12月25日  22：20 -  22：30'></input>    
+		<input value='12月25日  22：20 -  22：30'/>    
     </view>
 	<view class='bottom-line'></view>
    <view class='fullin-infor'>
@@ -44,13 +44,13 @@
     <view class='thankfee'>
         <text>感谢费</text>
         <image class='iconfont'></image>
-        <input type='number' placeholder-class='plhcolor' placeholder='可以更快被抢单哦 '></input>
+        <input type='number' placeholder-class='plhcolor' placeholder='可以更快被抢单哦 '/>
     </view>
 	<view class='bottom-line'></view>
     <view class='thankfee remark'>
         <text>捎话</text>
         <image class='iconfont icon-dayuhao'></image>
-		<input value='价格好商量，快点来接单快点来接单快点来接单快点来'></input>
+		<input value='价格好商量，快点来接单快点来接单快点来接单快点来'/>
     </view>
 	<view class='fullin-infor tool'style='font-size:24rpx;'>
 		<view>

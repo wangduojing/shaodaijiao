@@ -1,6 +1,7 @@
 // pages/forgetpassword/forgetpassword.js
 var request = require('../../utils/request') // 请求js文件
 var validate = require('../../utils/validate') // 验证js文件
+
 Page({
 
     /**

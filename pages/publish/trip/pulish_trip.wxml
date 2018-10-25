@@ -22,7 +22,7 @@
 		</view>
 		<view class='tool star-time'>
 			<text>备注说明：</text>
-			<input type='text'></input>
+			<input type='text'/>
 		</view>		
 	</view>
 	<button bindtap='publish_cargo'>立即发布</button>

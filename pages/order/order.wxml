@@ -41,12 +41,12 @@
     <view class='thankfee'>
         <text>感谢费：</text>
         <image class='iconfont icon-dayuhao'></image>
-        <input value='可以更快被抢单哦 '></input>
+        <input value='可以更快被抢单哦 '/>
     </view>
     <view class='thankfee protect-price'>
         <text>保价：</text>
         <image class='iconfont icon-dayuhao'></image>
-        <input value='贵重物品建议保价 '></input>
+        <input value='贵重物品建议保价 '/>
     </view>
     <view class='thankfee remark'>
         <text>捎话：</text>

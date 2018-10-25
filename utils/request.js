@@ -9,12 +9,18 @@ var url = {
 	quick_login: '/usr/sin', // 快捷登录
 	forget_password: '/usr/fpd',// 忘记密码
 	publish_cargo: '/pub/pci',// 发布货源
-	cargo_list: '/pub/carry' // 我要捎货
+	cargo_list: '/pub/carry',// 我要捎货
+	personal_infor:'/role/qpp'//查询个人资料
+	// /role/mpp //修改个人资料
+	// /role/arp //添加个人资料
+	// /role/qtp //查询他人资料
+
+
 }
 
 // 注册获取验证码
 function code_register (params) {
-	return getApp().httpsRequest(url.code_register, params)
+	return getApp().httpsRequest(url.code_register, params)//返回的值是'使用全局getApp() 函数可以用来获取到小程序.app.js里的请求方法httpsRequest()',两个参数对应httpsRequest(a,b,c)前两个参数
 }
 // 注册请求
 function user_register (params) {
@@ -51,11 +57,11 @@ function cargo_list(params) {
 	return getApp().httpsRequest(url.cargo_list, params)
 }
 
-
-// 缓存储存
-var storageKeys = {
-	key_publish_sender_address: 'key_publish_sender_address'// 缓存发件人地址 
+//个人资料
+function personal_infor(params){
+	return getApp().httpsRequest(url.personal_infor, params)
 }
+
 
 // 暴露方法
 module.exports = {
@@ -67,5 +73,6 @@ module.exports = {
 	code_forget_password: code_forget_password,
 	forget_password: forget_password,
 	publish_cargo: publish_cargo,
-	cargo_list: cargo_list
+	cargo_list: cargo_list,
+	personal_infor: personal_infor
 }

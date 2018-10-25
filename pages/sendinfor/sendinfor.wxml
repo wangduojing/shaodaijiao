@@ -4,13 +4,13 @@
         <view class='inforcon'>
             <icon class='iconfont must-infor'>*</icon>
             <text>姓名 </text>
-            <input placeholder-class='plhcolor' name="name" value="{{name}}" placeholder='请输入发件人姓名'></input>
+            <input placeholder-class='plhcolor' name="name" value="{{name}}" placeholder='请输入发件人姓名'/>
             <image class='iconfont icon-contact-phone' bindtap='getContact'></image>
         </view>
         <view class='inforcon'>
             <icon class='iconfont must-infor'>*</icon>
             <text>联系方式 </text>
-            <input type='number' maxlength="11" name="tel" value="{{tel}}" placeholder-class='plhcolor' placeholder='请输入发件人手机'></input>
+            <input type='number' maxlength="11" name="tel" value="{{tel}}" placeholder-class='plhcolor' placeholder='请输入发件人手机'/>
         </view>
         <view class='inforcon'>
             <icon class='iconfont must-infor'>*</icon>
@@ -29,7 +29,7 @@
         <view class='inforcon last-infor'>
             <icon class='iconfont must-infor'>*</icon>
             <text>详细地址 </text>
-            <input name="address" value='{{address}}' placeholder-class='plhcolor' placeholder='请输入发件人详细地址'></input>
+            <input name="address" value='{{address}}' placeholder-class='plhcolor' placeholder='请输入发件人详细地址'/>
         </view>
     </view>
     <view class='save'>

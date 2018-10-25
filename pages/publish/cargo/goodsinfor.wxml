@@ -13,7 +13,7 @@
 <view class='goods-name commontit'>
     <text>物品名称</text>
     <icon class='iconfont icon-quxiao'></icon>
-    <input></input>
+    <input/>
 </view>
 <view class='tip'>提示：根据法律规定，捎货人将对您手机物品进行核实，请暂时不要将外包装封口，感谢您的配合</view>
 <view class='border-bg'></view>
@@ -28,7 +28,7 @@
 <view class='base_textcolor goods-face'>*
     <text>物品重量</text>  
     <icon class='iconfont icon-dayuhao'></icon>
-	<input value=''></input>
+	<input value=''/>
 </view>
 <view class='goods-face goods-v'>
     <text>物品体积</text>  
@@ -39,10 +39,10 @@
 	</view>
 	<view class='goods-v-text'>
 		<view class='hide-range' hidden='{{rangeinput}}'>
-			<input value=''></input>
+			<input value=''/>
 			<text>~</text>
 		</view>
-		<input value=''></input>
+		<input value=''/>
 	</view>	
 </view>
 <view class='goods-face goods-photo'>

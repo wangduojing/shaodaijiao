@@ -66,9 +66,8 @@ button{
 	display: flex;
     justify-content: space-between;
 	line-height: 68rpx;
-	border: 2rpx solid #eee;
-	border-left:none;
-	border-right:none;
+	border-bottom: 2rpx dashed #eee;
+	
 }
 .chose-picker picker-view{
 	width: 100%; 
@@ -77,4 +76,10 @@ button{
 }
 .chose-picker picker-view-column{
 	line-height: 60rpx;
+}
+.distpicker-btn .type{
+	font-weight: 600;
+}
+.personinforlist .lastlist{
+	border-bottom: none;
 }

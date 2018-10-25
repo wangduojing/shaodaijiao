@@ -1,4 +1,5 @@
 // pages/personalcenter/personalinformation/personalinformation.js
+var request = require('../../../utils/request') // 请求js文件
 Page({
 
   /**
@@ -6,17 +7,35 @@ Page({
    */
   data: {
 	  showsexpick: false,
-	  male:"男",
-	  female:"女",
-	  sexinput:'',
-	  value:[]
+	  showgender: ["", "男", "女"],
+	  sexValue: [],
+	  value:"5",
+	  personProfile: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+	  request.personal_infor("{}").then(resData => {
+		  console.log(resData.data.resBodyDto);
+		console.log(resData)
+		if (resData.data.stateCode == 302){
+			wx.redirectTo({
+				url: '../../login/login',
+			})
+		}else{
+			//就是可以看到信息了
+			console.log(resData.data.resBodyDto != null);
+			if (resData.data.resBodyDto != null){
+				this.setData({
+					personProfile: resData.data.resBodyDto
+				})
+			}
+			console.log(resData.data.resBodyDto.rpAgePeriod)
+		}
 
+	  })
   },
 
   /**
@@ -79,19 +98,19 @@ Page({
 	 * pick的确定取消
 	 */
 	pickerCancel:function(){
-		showsexpick:false
-	},
-	pickerSure:function(e){	
-		console.log(e.detail)	
-		// var val = e.detail.value
-		// this.setData({
-		// 	sexinput: this.data.value[val[0]],
-		// })
-	},
-	sexbindchange:function(e){
-		var val = e.detail.value
 		this.setData({
-			sexinput: this.data.value[val[0]],
+			showsexpick: false,
+			// sexValue: this.data.sexgender
+		})
+	},
+	pickerSure:function(e){
+		this.setData({
+			showsexpick: false,
+		})
+	},
+	sexbindchange:function(e){		
+		this.setData({
+			sexValue: this.data.sexgender[e.detail.value]
 		})
 	}
 

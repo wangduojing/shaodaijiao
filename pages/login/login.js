@@ -206,7 +206,7 @@ Page({
 			if(!flag2){
 				this.showMessage("密码不符合规范")
 			}
-			request.user_login("{'userName': '" + phone + "', 'userPassword': '" + password + "'}").then(resData => {
+			request.user_login("{'userName': '" + phone + "', 'userPassword': '" + password + "'}").then(resData => {//有参数和无参数区别 resData是自定义 =>是赋值给下一个方法
 				if (resData.data.stateCode != 200) {
 					this.showMessage(resData.data.message)
 					return
@@ -215,7 +215,7 @@ Page({
 				getApp().cacheHeader(JSON.stringify(resData.data.resHeadDto));
 				// 跳转登录成功页面
 				wx.navigateTo({
-					url: '../default',
+					url: '../index/index',
 				})
 			})
 		}

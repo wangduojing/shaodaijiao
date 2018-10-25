@@ -54,9 +54,9 @@ App({
 	httpsRequest: function (url, params, functinName) {
 		var returnData = null;
 		var header = this.getHeader();
-		url = this.globalData.requestUrl + url;
-		return new Promise(function (resolve, reject){
-			wx.request({
+		url = this.globalData.requestUrl + url;//上面链接拼接后台给的请求地址url
+		return new Promise(function (resolve, reject){//什么函数
+			wx.request({//请求格式
 				url: url,
 				data: { 'json': "{'reqHeader':" + header + ",'reqBodyDto':" + params + "}" },
 				method: 'POST',
