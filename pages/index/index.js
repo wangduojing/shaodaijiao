@@ -83,4 +83,9 @@ Page({
 			url: "../publish/trip/cargo_list",
 		})
 	},
+	click_center: function () {
+		wx.navigateTo({
+			url: "../personalcenter/personalcenter",
+		})
+	}
 })

@@ -2,7 +2,7 @@
 <view class="container">
     <view class='nav'>
         <view class='common-nav'>
-            <view class='iconfont icon-user'></view>
+            <view class='iconfont icon-user' bindtap='click_center'></view>
             <view class='iconfont icon-bars'></view>
         </view>
     </view>
