@@ -1,10 +1,10 @@
 {
     "pages": [
         "pages/personalcenter/personalinformation/personalinformation",
-        "pages/personalcenter/personalcenter",
-        "pages/publish/cargo/goodsinfor",
         "pages/login/login",
         "pages/index/index",
+        "pages/personalcenter/personalcenter",
+        "pages/publish/cargo/goodsinfor",
         "pages/publish/cargo/fastpublish",
         "pages/address/address",
         "pages/publish/trip/cargo_list",
