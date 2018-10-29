@@ -35,6 +35,28 @@ App({
                 }
             }
         })
+		// 获取当前定位
+		wx.getLocation({
+			success: function (res) {
+				var lng = res.longitude;
+				var lat = res.latitude;
+				var requestUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + lat + "," + lng + "&key=7NDBZ-ISDKJ-2JSF7-FDP4L-6EQYZ-SRBTP"
+				wx.request({
+					url: requestUrl,
+					success: function (res) {
+						var province = res.data.result.address_component.province;
+						var city = res.data.result.address_component.city;
+						var district = res.data.result.address_component.district;
+						var address = res.data.result.address;
+						var location = "{'province': '" + province + "','city':'" + city + "','district':'" + district + "','address':'" + address + "','lng':" + lng + ",'lat':" + lat + "}";
+						wx.setStorage({
+							key: 'location_key',
+							data: location
+						})
+					}
+				})
+			},
+		})
     },
 	globalData: {
 		requestUrl: 'https://mb.dlada56.com',
