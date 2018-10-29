@@ -37,7 +37,7 @@
 	<view class="distpicker-btn">
         <view class="distpicker-cancel-btn" bindtap="pickerCancel">取消</view>
 		<view class='type'>性别</view>
-        <view class="distpicker-sure-btn base_textcolor" bindtap="pickerSure" data-num="5">确定</view>
+        <view class="distpicker-sure-btn base_textcolor" bindtap="pickerSure">确定</view>
     </view>
 	<picker-view indicator-style="height: 80rpx;" bindchange="sexbindchange">
 		<picker-view-column>
