@@ -20,7 +20,8 @@
         "pages/auth/auth",
         "pages/publish/trip/trip_list",
         "pages/publish/trip/cargo_detail",
-        "pages/publish/trip/canorder_list"
+        "pages/publish/trip/canorder_list",
+		"pages/forgetpassword/forgetpassword"
     ],
     "window": {
         "backgroundTextStyle": "light",
