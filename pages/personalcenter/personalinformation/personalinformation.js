@@ -3,13 +3,12 @@ var request = require('../../../utils/request') // 请求js文件
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据 
    */
   data: {
 	  showsexpick: false,
 	  showgender: ["", "男", "女"],
 	  sexValue: [],
-	  value:"5",
 	  personProfile: null
   },
 
@@ -18,21 +17,21 @@ Page({
    */
   onLoad: function (options) {
 	  request.personal_infor("{}").then(resData => {
-		  console.log(resData.data.resBodyDto);
-		console.log(resData)
+		//   console.log(resData.data.resBodyDto);
+		// console.log(resData)
 		if (resData.data.stateCode == 302){
 			wx.redirectTo({
 				url: '../../login/login',
 			})
 		}else{
 			//就是可以看到信息了
-			console.log(resData.data.resBodyDto != null);
+			// console.log(resData.data.resBodyDto != null);
 			if (resData.data.resBodyDto != null){
 				this.setData({
 					personProfile: resData.data.resBodyDto
 				})
 			}
-			console.log(resData.data.resBodyDto.rpAgePeriod)
+			// console.log(resData.data.resBodyDto.rpAgePeriod)
 		}
 
 	  })
