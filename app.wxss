@@ -55,8 +55,6 @@
 
 .icon-shimingrenzheng:before { content: "\e628"; font-size: 84rpx; color: #81dac8}
 
-.icon-shimingrenzheng:before { content: "\e628"; font-size: 84rpx; color: #81dac8;}
-
 .icon-dianhua:before { content: "\e64c"; }
 
 .icon-active-you:before { content: "\e603";  color: #dcdcdc;}
