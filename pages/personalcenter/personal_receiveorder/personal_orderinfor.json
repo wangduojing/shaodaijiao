@@ -3,6 +3,6 @@
 	"usingComponents": {},
 	"backgroundTextStyle": "light",
 	"navigationBarBackgroundColor": "#fff",
-	"navigationBarTitleText": "个人资料",
+	"navigationBarTitleText": "订单详情",
 	"navigationBarTextStyle": "black"
 }

@@ -10,15 +10,15 @@
     </view>
     <view class='cargo-trip'>
         <view class='cargotrip-list'>
-            <view>
-                <icon class='iconfont icon-dingdan'></icon> 我接的单
+            <view bindtap='receive_order'>
+                <icon class='iconfont icon-dingdan'></icon>  我接的单
                 <icon class='iconfont icon-dayuhao'></icon>
             </view>
-            <view>
-                <icon class='iconfont icon-fasong'></icon> 我发的单
+            <view bindtap='send_order'>
+                <icon class='iconfont icon-fasong'></icon>我发的单
                 <icon class='iconfont icon-dayuhao'></icon>
             </view>
-            <view class='last'>
+            <view class='last' bindtap='my_trip'>
                 <icon class='iconfont icon-hangcheng'></icon>我的行程
                 <icon class='iconfont icon-dayuhao'></icon>
             </view>

@@ -1,0 +1,156 @@
+/* pages/personalcenter/person_receiveorder/person_receiveorder.wxss */
+page{
+	width: 100%;
+	height: 100%;
+	background: #e3e2e2;
+}
+.contain{
+	width: 100%;
+	height: 100%;
+}
+.type-title{
+	width: 100%;
+	line-height: 60rpx;
+	padding-top:2rpx;
+	background: #fff;
+	border-bottom: 2rpx solid #e3e2e2;
+	border-top: 1rpx solid #e3e2e2;
+	display: flex;
+	justify-content: space-around;
+}
+.type-title view{
+	font-size: 24rpx;
+	width: 25%;
+	text-align: center;
+	color: #333;
+}
+.activestyle{
+	color: #1cbc9c;
+	border-bottom: 4rpx solid #1cbc9c;
+}
+.noactive{
+	color: #333;
+	border-bottom:none;
+}
+.listinfor {
+    width: 100%;
+    margin: auto;
+	background: #fff;
+	border-top: 10rpx solid #e3e2e2;
+}
+
+.listinfor .maininfor {
+	width: 688rpx;
+	margin: auto;
+    padding: 26rpx 0 26rpx;
+	border-bottom: 2rpx dashed #a8a8a8;
+}
+
+.listinfor .mark {
+    font-size: 20rpx;
+    border-radius: 20rpx;
+    line-height: 24rpx;
+    padding: 2rpx 10rpx;
+    background: #e5f5e5;
+    color: #1cbc9c;
+    border: #1cbc9c solid 2rpx;
+    margin-right: 9rpx;
+    vertical-align: middle;
+}
+
+.listinfor .fastmark {
+    background: #f8eade;
+    color: #f86418;
+    border: #f86418 solid 2rpx;
+}
+
+.information {
+    font-size: 22rpx;
+    line-height: 30rpx;
+}
+
+.status {
+    font-size: 26rpx;
+    line-height: 30rpx;
+    float: right;
+    margin: 10rpx 0 auto auto;
+    color: #444;
+}
+
+.addressinfor {
+    width: 91%;
+    margin: 20rpx auto 0;
+    color: #666;
+    font-size: 24rpx;
+}
+
+.addressinfor view {
+    margin-bottom: 14rpx;
+    line-height: 38rpx;
+    width: 470rpx;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.addressinfor view text {	
+    border-radius: 50%;
+    padding: 4rpx;
+    color: #333;
+    font-size: 16rpx;
+    line-height: 16rpx;
+    margin-right: 7rpx;
+	
+}
+
+.addressinfor view:nth-child(1) text:nth-child(1) {
+    border: #669ff2 solid 1rpx;
+    background: #adcdfc;
+    color: #fff;
+}
+
+.addressinfor view text:nth-child(2) {
+    font-size: 24rpx;
+}
+
+.addressinfor view:nth-child(2) text:nth-child(1) {
+    border: #24b27b solid 2rpx;
+    background: #8ee3c2;
+    color: #fff;
+}
+.listinfor .price-number-btn{
+	width: 100%;
+	border-top: 2rpx solid #e3e2e2;
+}
+
+.listinfor .price { 
+    width: 90%;
+    margin: 0 auto 10rpx; 
+    font-size: 20rpx;
+    line-height: 88rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.listinfor .price view button{
+	width: 150rpx;
+	line-height: 50rpx;
+	font-size: 24rpx;
+	border: none;
+	border-radius: 40rpx;
+	color: #fff;
+	padding: 0;
+	margin-top: 18rpx;
+}
+.listinfor .price .goods-code{
+	color: #999;
+}
+.send-time {
+    width: 90%;
+    margin: 0 auto 10rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.send-time text {
+    margin-left: 16rpx;
+}

@@ -1,0 +1,117 @@
+<!--pages/personalcenter/person_receiveorder/person_receiveorder.wxml-->
+<view class='contain'>
+	<view class='type-title'>
+		<view class="{{active1 ? 'activestyle' :'noactive'}}" bindtap='all'>全部</view>
+		<view class="{{active2 ? 'noactive' :'activestyle'}}" bindtap='doing'>进行中</view>
+		<view class="{{active3 ? 'noactive' :'activestyle'}}" bindtap='already'>已完成</view>
+		<view class="{{active4 ? 'noactive' :'activestyle'}}" bindtap='failure'>失效单</view>
+	</view>
+	<view class='listinfor' bindtap='personal_orderinfor'>
+		<view class='maininfor'>
+			<text class='mark fastmark'>急捎</text>
+			<text class='information'>手机数码/20g</text>
+			<text class='status'>待对方确认</text>
+		</view>
+		<view class='addressinfor'>
+			<view>
+				<text>取</text>
+				<text>北京-通州区</text>
+			</view>
+			<view>
+				<text>送</text>
+				<text>延安-嘉兴桥小区22单元</text>
+			</view>
+		</view>
+		<view class='send-time'>预约取件时间段：2017/12/22
+			<text>22：20-22：30</text>
+		</view>
+		<view class='send-time'>最晚送达时间：2017/12/22
+			<text>22：22</text>
+		</view>
+		<view class='price-number-btn'>
+			<view class='price'>
+				<view>
+					我的报价：¥<text>85.00</text>
+				</view>
+				<!-- <view>
+					<button>立即确认</button>
+				</view> -->
+			</view>
+		</view>
+	</view>
+
+	<view class='listinfor'>
+		<view class='maininfor'>
+			<text class='mark'>普捎</text>
+			<text class='information'>文件·证件/20公斤</text>
+			<text class='status'>送件中</text>
+		</view>
+		<view class='addressinfor'>
+			<view>
+				<text>取</text>
+				<text>北京-通州区</text>
+			</view>
+			<view>
+				<text>送</text>
+				<text>延安-嘉兴桥小区22单元那然色布斯台音布拉格那然色布斯台音布拉格</text>
+			</view>
+		</view>
+		<view class='send-time'>预约取件时间段：2017/12/22
+			<text>22：20-22：30</text>
+		</view>
+		<view class='send-time'>最晚送达时间：2017/12/22
+			<text>22：22</text>
+		</view>
+		<view class='price-number-btn'>
+			<view class='price'>
+				<view>
+					酬金：¥<text>85.00</text>
+				</view>
+				<view class='goods-code'>
+					收到收货码:S12345 
+				</view>
+				<view>
+					<button>确认送达</button>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class='listinfor'>
+		<view class='maininfor'>
+			<text class='mark'>普捎</text>
+			<text class='information'>文件·证件/20公斤</text>
+			<text class='status'>待取件</text>
+		</view>
+		<view class='addressinfor'>
+			<view>
+				<text>取</text>
+				<text>北京-通州区</text>
+			</view>
+			<view>
+				<text>送</text>
+				<text>延安-嘉兴桥小区22单元那然色布斯台音布拉格那然色布斯台音布拉格</text>
+			</view>
+		</view>
+		<view class='send-time'>预约取件时间段：2017/12/22
+			<text>22：20-22：30</text>
+		</view>
+		<view class='send-time'>最晚送达时间：2017/12/22
+			<text>22：22</text>
+		</view>
+		<view class='price-number-btn'>
+			<view class='price'>
+				<view>
+					酬金：¥<text>85.00</text>
+				</view>
+				<view class='goods-code'>
+					收到收货码:S12345 
+				</view>
+				<view>
+					<button>发送验证码</button>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+

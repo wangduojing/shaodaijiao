@@ -1,0 +1,69 @@
+<!--pages/personalcenter/personal_receiveorder/personal_orderinfor.wxml-->
+<view class='contain'>
+	<view class='common-row information'>
+		<view class='number'>
+			<view>订单编号：<text>23565656656666</text></view>
+			<text class='mark fastmark'>急捎</text>
+		</view>
+	</view>
+	<view class='common-row'>
+		<view class='address'>
+			<view class='addtitle'>
+				<view></view><text>发件人信息</text> 
+			</view>
+			<view class='address-infor'>
+				<text>张立辉 1355412124</text>
+				<text>丰台区22号嘉丰国际大厦</text>
+			</view>
+		</view>
+	</view>
+	<view class='common-row'>
+		<view class='address'>
+			<view class='addtitle receive'>
+				<view></view><text>收件人信息</text> 
+			</view>
+			<view class='address-infor'>
+				<text>丰台区22号嘉丰国际大厦</text>
+			</view>
+		</view>
+	</view>
+	<view class='common-row time'>
+		<view class='send-time'>预约取件时间段：2017/12/22
+			<text>22：20-22：30</text>
+		</view>
+		<view class='send-time'>最晚送达时间：2017/12/22
+			<text>22：22</text>
+		</view>
+	</view>
+	<view class='common-row progress'>
+		<view>订单进度</view>
+		<icon class='iconfont icon-xiala1' bindtap='lookprogersstime'></icon>
+		<text>我要发货</text>
+	</view>
+	<view hidden='{{progersstime ? true : false}}' class='common-row progerss-time'>
+		<view>下单时间：2017-12-22 22：22：22</view>
+		<view>下单时间：2017-12-22 22：22：22</view>
+		<view>下单时间：2017-12-22 22：22：22</view>
+	</view>
+	<view class='common-row progress goods-infortit'>
+		<view>物品信息</view>
+		<icon class='iconfont icon-xiala1' bindtap='lookgoodsinfor'></icon>
+	</view>
+	<view hidden='{{goodsinfor ? true : false}}' class='common-row goods-infor'>
+		<view><text>类型：</text>文件/证件</view>
+		<view><text>名称：</text>文件</view>
+		<view><text>价值：</text>50元以下</view>
+		<view><text>重量：</text>5公斤以下</view>
+		<view class='photo'><text>照片：</text><image></image><image></image><image></image></view>
+		<view><text>配送工具：</text> 不限</view>
+		<view><text>悄悄话：</text> 很着急，请快点接单</view>
+	</view>
+	<view class='common-row personal-infor'>
+		<image></image>
+		<view>
+			<text>李玉华</text>
+			<icon class='iconfont icon-shimingrenzheng'></icon>
+		</view>
+		<icon class='iconfont icon-dianhua'></icon>
+	</view>
+</view>

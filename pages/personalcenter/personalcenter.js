@@ -72,5 +72,30 @@ Page({
 		wx.redirectTo({
 			url: 'personalinformation/personalinformation',
 		})
+	},
+	/**
+	 * 跳转我接的单
+	 */
+	receive_order: function () {
+		wx.redirectTo({
+			url: 'personal_receiveorder/personal_receiveorder',
+		})
+	},
+	/**
+	 * 跳转我发的单
+	 */
+	send_order: function () {
+		wx.redirectTo({
+			url: 'personal_sendorder/personal_sendorder',
+		})
+	},
+	
+	/**
+	 * 跳转我的行程
+	 */
+	my_trip: function () {
+		wx.redirectTo({
+			url: 'personal_trip/personal_trip',
+		})
 	}
 })

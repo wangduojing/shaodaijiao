@@ -1,0 +1,172 @@
+/* pages/personalcenter/personal_receiveorder/personal_orderinfor.wxss */
+page{
+	width: 100%;
+	height: 100%;
+	background: #eeeeee;
+}
+.contain{
+	width: 688rpx;
+	height: auto;
+	margin: auto;
+}
+.common-row{
+	width: 656rpx;
+	padding: 0 18rpx;
+	background: #fff;
+	margin-bottom: 2rpx;
+}
+.information{
+	margin: 14rpx auto 2rpx;
+	font-size: 22rpx;
+	line-height: 58rpx;
+}
+.information .number{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.information .number view text{
+	font-size: 20rpx;
+}
+.information .mark{
+	height: 28rpx;
+	font-size: 20rpx;
+    border-radius: 20rpx;
+    line-height: 28rpx;
+    padding: 2rpx 10rpx;
+    background: #e5f5e5;
+    color: #1cbc9c;
+    border: 2rpx #1cbc9c solid;
+    margin-right: 9rpx;
+    vertical-align: middle;
+	margin-top: 14rpx;
+}
+.information .fastmark{
+	background: #fde9dd;
+	color: #ff7e45;
+    border: 2rpx #ff7e45 solid;
+}
+.address{
+	line-height: 24rpx;
+}
+.address .addtitle{
+	font-size: 22rpx;
+	color: #999;	
+	padding-top: 18rpx;
+	clear: both;
+}
+.address .addtitle view{
+	margin-top: 10rpx;
+	border: 6rpx solid #ff7e45;
+	border-radius: 100%;
+	float: left;
+	margin-right: 12rpx;
+}
+.receive.addtitle view{
+	border: 6rpx solid #8ac306;
+}
+.address .address-infor{
+	color: #333;
+	font-size: 23rpx;
+	height: 92rpx;
+	line-height: 38rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.time{
+	padding: 15rpx 18rpx;
+}
+.send-time{
+	color: #999;
+	font-size: 21rpx;
+}
+.progress{
+	margin:14rpx auto 2rpx; 
+	border-top-left-radius: 10rpx;
+	border-top-right-radius: 10rpx;
+	line-height: 88rpx;
+	font-size: 24rpx;
+	overflow: hidden;
+}
+.progress view{
+	float: left;
+}
+.progress text{
+	float: right;
+	color: #1cbc9c;
+	margin-right: 10rpx;
+}
+.progress icon{
+	float: right;
+}
+.progress icon::before{
+	color: #1cbc9c;
+}
+.progerss-time{
+	margin: 0;
+	font-size: 20rpx;
+	padding: 15rpx 18rpx;
+	line-height: 50rpx;
+}
+.goods-infortit{
+	margin: 14rpx auto 2rpx;
+}
+.goods-infor view{
+	font-size: 24rpx;
+	line-height: 68rpx;
+	color: #333;
+}
+.goods-infor view text{
+	color: #999;
+	margin-right: 20rpx;
+}
+.photo{
+	height: 116rpx;
+	
+}
+.photo text{
+	line-height: 116rpx;
+	float: left;
+}
+.photo image{
+	border: 2rpx solid #999;
+	width:116rpx;
+	height: 80rpx;
+	margin: 18rpx 22rpx 0 0;
+}
+.personal-infor{
+	height: 130rpx;
+	margin-top: 22rpx;
+}
+.personal-infor image{
+	float: left;
+	width: 80rpx;
+	height: 80rpx;
+	border: 2rpx solid #999;
+	border-radius: 100%;
+	margin: 34rpx 13rpx auto 0;
+}
+.personal-infor view{
+	float: left;
+	margin-top: 34rpx;
+	
+}
+.personal-infor view text{
+	display: block;
+	color: #333;
+	font-size: 24rpx;
+	line-height: 30rpx;
+	margin-bottom: 13rpx;
+}
+.personal-infor view icon.icon-shimingrenzheng::before{
+	font-size: 88rpx;
+}
+.personal-infor icon.icon-dianhua{
+	float: right;
+	margin-top: 44rpx;
+}
+.personal-infor icon.icon-dianhua::before{
+	font-size: 46rpx;
+	color: #666;
+}
