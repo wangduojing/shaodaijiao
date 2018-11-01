@@ -14,7 +14,8 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		progersstime: (options.progersstime == 'true' ? true : false)
+		goodsinfor: (options.progersstime == 'true' ? true : false)
 	},
 
 	/**
@@ -70,7 +71,7 @@ Page({
 	 */
 	lookprogersstime:function(){
 		this.setData({
-			progersstime:false
+			progersstime: (!this.data.progersstime)
 		})
 	},
 	/**
@@ -78,7 +79,7 @@ Page({
 	 */
 	lookgoodsinfor: function(){
 		this.setData({
-			goodsinfor: false
+			goodsinfor: (!this.data.goodsinfor)
 		})
 	}
 })

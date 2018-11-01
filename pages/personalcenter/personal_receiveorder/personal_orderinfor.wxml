@@ -1,4 +1,5 @@
 <!--pages/personalcenter/personal_receiveorder/personal_orderinfor.wxml-->
+<!-- 本页面适用于这些页面: 待对方确认  取消订单(暂时不做) 已取消 已失效 已送达 删除订单  共6种状态-->
 <view class='contain'>
 	<view class='common-row information'>
 		<view class='number'>
@@ -27,6 +28,16 @@
 			</view>
 		</view>
 	</view>
+	<!-- 急捎的价格布局开始 -->
+	<view class='common-row fee'>
+		<view class='fee-money'>
+			200.00元
+		</view> 
+		<view class='fee-infor'>
+			（运费：22.00元  感谢费：2.00元）
+		</view>
+	</view>
+	<!-- 急捎的价格布局开始 -->
 	<view class='common-row time'>
 		<view class='send-time'>预约取件时间段：2017/12/22
 			<text>22：20-22：30</text>
@@ -35,12 +46,22 @@
 			<text>22：22</text>
 		</view>
 	</view>
+	<!-- 普捎的价格布局开始 -->
+	<!-- <view class='common-row fee'>
+		<view class='fee-money'>
+			我的报价：<text>200.00元</text>
+		</view>
+		<view class='fee-time'>
+			报价时间：2017/12/22 22：22
+		</view>
+	</view> -->
+	<!-- 普捎的价格布局结束 -->
 	<view class='common-row progress'>
 		<view>订单进度</view>
 		<icon class='iconfont icon-xiala1' bindtap='lookprogersstime'></icon>
 		<text>我要发货</text>
 	</view>
-	<view hidden='{{progersstime ? true : false}}' class='common-row progerss-time'>
+	<view class="common-row progerss-time {{progersstime ? 'hide' : 'show'}}">
 		<view>下单时间：2017-12-22 22：22：22</view>
 		<view>下单时间：2017-12-22 22：22：22</view>
 		<view>下单时间：2017-12-22 22：22：22</view>
@@ -50,7 +71,7 @@
 		<icon class='iconfont icon-xiala1' bindtap='lookgoodsinfor'></icon>
 	</view>
 	<view hidden='{{goodsinfor ? true : false}}' class='common-row goods-infor'>
-		<view><text>类型：</text>文件/证件</view>
+		<view><text>类型：</text>文件/证件</view> 
 		<view><text>名称：</text>文件</view>
 		<view><text>价值：</text>50元以下</view>
 		<view><text>重量：</text>5公斤以下</view>
@@ -66,4 +87,15 @@
 		</view>
 		<icon class='iconfont icon-dianhua'></icon>
 	</view>
+</view>
+
+<!-- 取消订单(暂时不做) 删除订单和取消订单按钮  和下面的固定按钮不会共存 -->
+<view  class='cancel-order'>
+	<button>取消订单</button>
+</view>
+
+<!-- 待对方确认,固定在最下方 -->
+<view class='wait-btn'>
+	<button class='edit-btn'>修改报价</button>
+	<button>取消报价</button>
 </view>
