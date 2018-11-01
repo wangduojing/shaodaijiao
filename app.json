@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/personalcenter/personal_receiveorder/personal_orderinfor_map",
 		"pages/personalcenter/personal_receiveorder/personal_orderinfor",
 		"pages/personalcenter/personal_receiveorder/personal_receiveorder",
 		"pages/personalcenter/personal_sendorder/personal_sendorder",
