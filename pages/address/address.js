@@ -10,67 +10,86 @@ Page({
      */
     data: {
         address: [],
-		searchValue:'',
-		istext: false,
-		searchKey: ''
-
+        searchValue: '',
+        istext: false,
+        searchKey: '',
+        gpscity: '',
+        gpsaddress: '',
+        lng: '',
+        lat: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-	onLoad: function () {
-		// 实例化API核心类
-		qqmapsdk = new QQMapWX({
-			key: 'D6CBZ-D7PHQ-G7L54-GZJKF-B3PDK-MZBR4'
-		});
-	},
+    onLoad: function() {
+        // 实例化API核心类
+        qqmapsdk = new QQMapWX({
+            key: 'D6CBZ-D7PHQ-G7L54-GZJKF-B3PDK-MZBR4'
+        });
+        var _this = this;
+        wx.getStorage({
+            key: 'location_key',
+            success: function(res) {
+                _this.setData({
+                    gpscity: JSON.parse(res.data).city.replace("市", ""),
+                    gpsaddress: JSON.parse(res.data).district,
+                    lng: JSON.parse(res.data).lng,
+                    lat: JSON.parse(res.data).lat,
+                })
+                console.log(res)
+            },
+
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-		var _this = this;
-		// 调用接口
-		qqmapsdk.search({
-			keyword: "荣京",  //搜索关键词
-			location: '39.980014,116.313972',  //设置周边搜索中心点
-			success: function (res) { //搜索成功后的回调				
-				console.log(res);
-				_this.setData({
-					address: res.data
-				})
-			},
-			fail: function (res) {
-				console.log(res);
-			},
-			complete: function (res) {
-				//console.log(res);
-			}
-		});
+        var _this = this;
+        // 调用接口
+        qqmapsdk.search({
+            keyword: _this.data.gpscity + _this.data.gpsaddress, //搜索关键词
+            location: _this.data.lng + "," + _this.data.lat, //设置周边搜索中心点
+            success: function(res) { //搜索成功后的回调				
+                console.log(res);
+                _this.setData({
+                    address: res.data
+                })
+            },
+            fail: function(res) {
+                console.log(res);
+            },
+            complete: function(res) {
+                //console.log(res);
+            }
+        });
+
+
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-	onShow: function () {
-		// 调用接口
-		qqmapsdk.search({
-			keyword: function(){
-				keyword:searchValue	
-			},
-			success: function (res) {
-				console.log(res);
-			},
-			fail: function (res) {
-				console.log(res);
-			},
-			complete: function (res) {
-				console.log(res);
-			}
-		});
+    onShow: function() {
+        // 调用接口
+        qqmapsdk.search({
+            keyword: function() {
+                keyword: searchValue
+            },
+            success: function(res) {
+                console.log(res);
+            },
+            fail: function(res) {
+                console.log(res);
+            },
+            complete: function(res) {
+                console.log(res);
+            }
+        });
 
 
-	},
+    },
 
     /**
      * 生命周期函数--监听页面隐藏
@@ -106,90 +125,90 @@ Page({
     onShareAppMessage: function() {
 
     },
-	/**
-	 * 搜索栏后面的取消图标按钮
-	 */
-    clearValue:function(){
-		this.setData({
-			searchValue : ''
-		})
-		
-	},
-	clickSearchView: function () {
-		this.setData({
-			istext: true,
-		});
-	},
+    /**
+     * 搜索栏后面的取消图标按钮
+     */
+    clearValue: function() {
+        this.setData({
+            searchValue: ''
+        })
 
-	bindKeyInput: function (e) {
-		console.log(e);
-		this.setData({
-			searchKey: e.detail.value
-		})
-	},
+    },
+    clickSearchView: function() {
+        this.setData({
+            istext: true,
+        });
+    },
 
-	clickSearch: function (e) {
-		var that = this;
-		var keywords = that.data.searchKey;
-		if (keywords == "") {
-			wx.showModal({
-				title: '请输入搜索内容',
-				confirmColor: '#e75858',
-				showCancel: false,
-			})
-			return;
-		}
-		qqmapsdk.getSuggestion({
-			keyword: keywords,
-			success: function (res) {
-				console.log('sucess', res);
-			},
-			fail: function (res) {
-				console.log('fail', res);
-			},
-			complete: function (res) {
-				console.log('complete', res);
-				that.setData({
-					address: res.data
-				});
-				if (that.data.address == []) {
-					wx.showModal({
-						title: '没有找到您想要的结果',
-						confirmColor: "#E75858",
-						showCancel: false,
-					})
-				}
+    bindKeyInput: function(e) {
+        console.log(e);
+        this.setData({
+            searchKey: e.detail.value
+        })
+    },
 
-			}
-		})
-	},
+    clickSearch: function(e) {
+        var that = this;
+        var keywords = that.data.searchKey;
+        if (keywords == "") {
+            wx.showModal({
+                title: '请输入搜索内容',
+                confirmColor: '#e75858',
+                showCancel: false,
+            })
+            return;
+        }
+        qqmapsdk.getSuggestion({
+            keyword: keywords,
+            success: function(res) {
+                console.log('sucess', res);
+            },
+            fail: function(res) {
+                console.log('fail', res);
+            },
+            complete: function(res) {
+                console.log('complete', res);
+                that.setData({
+                    address: res.data
+                });
+                if (that.data.address == []) {
+                    wx.showModal({
+                        title: '没有找到您想要的结果',
+                        confirmColor: "#E75858",
+                        showCancel: false,
+                    })
+                }
 
-	didSelectCell: function (e) {
-		// var pages = getCurrentPages();
-		// var prevPage = pages[pages.length - 3];
-		// console.log('didselectCell', e);
-		// var index = e.currentTarget.dataset.index;
-		// console.log('didselectCelldata', this.data.address[index]);
-		// var locationData = this.data.address[index];
-		// var latitude = locationData.location.lat//locationStr.split(',')[0]
-		// var longitude = locationData.location.lng;//locationStr.split(',')[1]
-		// prevPage.setData({
-		// 	sendAddress: locationData.province + ',' + locationData.city + ',' + (locationData.district == undefined ? '' : locationData.district),
-		// 	detailAddress: locationData.title == undefined ? '' : locationData.title,
-		// 	address: locationData.province + '/' + locationData.city + (locationData.district == undefined ? '' : ('/' + locationData.district)),
-		// 	location: longitude + ',' + latitude
-		// })
-		// var locationDic = { 'latitude': latitude, 'longitude': longitude };
-		// wx.setStorage({
-		// 	key: 'map_Location',
-		// 	data: locationDic,
-		// })
-		// wx.navigateBack({
-		// 	delta: 2
-		// })
+            }
+        })
+    },
+
+    didSelectCell: function(e) {
+        // var pages = getCurrentPages();
+        // var prevPage = pages[pages.length - 3];
+        // console.log('didselectCell', e);
+        // var index = e.currentTarget.dataset.index;
+        // console.log('didselectCelldata', this.data.address[index]);
+        // var locationData = this.data.address[index];
+        // var latitude = locationData.location.lat//locationStr.split(',')[0]
+        // var longitude = locationData.location.lng;//locationStr.split(',')[1]
+        // prevPage.setData({
+        // 	sendAddress: locationData.province + ',' + locationData.city + ',' + (locationData.district == undefined ? '' : locationData.district),
+        // 	detailAddress: locationData.title == undefined ? '' : locationData.title,
+        // 	address: locationData.province + '/' + locationData.city + (locationData.district == undefined ? '' : ('/' + locationData.district)),
+        // 	location: longitude + ',' + latitude
+        // })
+        // var locationDic = { 'latitude': latitude, 'longitude': longitude };
+        // wx.setStorage({
+        // 	key: 'map_Location',
+        // 	data: locationDic,
+        // })
+        // wx.navigateBack({
+        // 	delta: 2
+        // })
 
 
-		console.log("ss");
+        console.log("ss");
 
-	}
+    }
 })

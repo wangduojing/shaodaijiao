@@ -40,7 +40,7 @@ App({
 			success: function (res) {
 				var lng = res.longitude;
 				var lat = res.latitude;
-				var requestUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + lat + "," + lng + "&key=7NDBZ-ISDKJ-2JSF7-FDP4L-6EQYZ-SRBTP"
+				var requestUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + lat + "," + lng + "&key=D6CBZ-D7PHQ-G7L54-GZJKF-B3PDK-MZBR4"
 				wx.request({
 					url: requestUrl,
 					success: function (res) {
@@ -48,7 +48,8 @@ App({
 						var city = res.data.result.address_component.city;
 						var district = res.data.result.address_component.district;
 						var address = res.data.result.address;
-						var location = "{'province': '" + province + "','city':'" + city + "','district':'" + district + "','address':'" + address + "','lng':" + lng + ",'lat':" + lat + "}";
+						var location = "{\"province\": \"" + province + "\",\"city\":\"" + city + "\",\"district\":\"" + district + "\",\"address\":\"" + address + "\",\"lng\":\"" + lng + "\",\"lat\":\"" + lat + "\"}";
+
 						wx.setStorage({
 							key: 'location_key',
 							data: location

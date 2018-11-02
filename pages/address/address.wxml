@@ -3,7 +3,7 @@
 	<view class='search'>
 		<view class='searchcon'>
 			<view>
-				<text>北京</text>
+				<text>{{gpscity}}</text>
 				<icon class='iconfont icon-xiala1'></icon>
 				<!-- <input placeholder='请输入发件地址' value='{{searchValue}}' bindtap="nearby_search"/> -->
 				<input type='text' value='{{searchValue}}' bindinput="bindKeyInput" placeholder='请输入发件地址' confirm-type="search" maxlength="100" bindconfirm="clickSearch" bindfocus="clickSearchView" bindblur="loseInputBlur" focus="true"/>

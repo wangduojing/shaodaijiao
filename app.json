@@ -1,6 +1,7 @@
 {
 	"pages": [
 		"pages/personalcenter/personal_receiveorder/personal_orderinfor_map",
+		"pages/address/address",
 		"pages/personalcenter/personal_receiveorder/personal_orderinfor",
 		"pages/personalcenter/personal_receiveorder/personal_receiveorder",
 		"pages/personalcenter/personal_sendorder/personal_sendorder",
@@ -10,7 +11,6 @@
 		"pages/login/login",
 		"pages/publish/cargo/goodsinfor",
 		"pages/publish/cargo/fastpublish",
-		"pages/address/address",
 		"pages/publish/trip/cargo_list",
 		"pages/publish/cargo/generalpublish",
 		"pages/order/order",
