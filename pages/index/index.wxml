@@ -36,7 +36,7 @@
         <view>进行中
             <text> ING</text>
         </view>
-        <view> 事项</view>
+        <view bindtap='jump_upImage'>事项</view>
     </view>
     <view class='list'>
         <view class='commontit'>

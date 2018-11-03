@@ -1,0 +1,3 @@
+<!--pages/image/image.wxml-->
+<image  class="upload_image" catchtap="upload_image" src="https://mb.dlada56.com/common/dlImage?src=group1/M00/01/13/wKjTsFvdULCAAdW5AAMVcHlqlJk593.jpg"></image>
+<image  class="upload_image" catchtap="upload_image" src="{{image}}"></image>

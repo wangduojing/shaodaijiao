@@ -87,5 +87,10 @@ Page({
 		wx.navigateTo({
 			url: "../personalcenter/personalcenter",
 		})
+	},
+	jump_upImage: function () {
+		wx.navigateTo({
+			url: '../image/image',
+		})
 	}
 })
