@@ -2,6 +2,16 @@
 var request = require('/utils/request.js');
 App({
     onLaunch: function() {
+		// 判断是否有网络
+		wx.getNetworkType({
+			success: function(res) {
+				if ('none' == res.networkType){
+					wx.showToast({
+						title: '跳转无网络页面',
+					})
+				}
+			},
+		})
         // 展示本地存储能力
         // var logs = wx.getStorageSync('logs') || []
         // logs.unshift(Date.now())
@@ -74,6 +84,17 @@ App({
 	},
 	// 发起请求封装
 	httpsRequest: function (url, params, functinName) {
+		// 判断是否有网络
+		wx.getNetworkType({
+			success: function (res) {
+				if ('none' == res.networkType) {
+					wx.showToast({
+						title: '跳转无网络页面',
+					})
+					return;
+				}
+			},
+		})
 		var returnData = null;
 		var header = this.getHeader();
 		url = this.globalData.requestUrl + url;//上面链接拼接后台给的请求地址url
