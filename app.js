@@ -108,6 +108,7 @@ App({
 				dataType: 'json',
 				header: { "Content-Type": "application/x-www-form-urlencoded" },
 				success: function (res) {
+					// 如果有登录信息,但是发起请求返回请登录,说明登录过期,跳转登录页面 TODO
 					resolve(res)
 				},
 				fail: function (res) {
@@ -143,6 +144,7 @@ App({
 			dataType: 'json',
 			header: { "Content-Type": "application/x-www-form-urlencoded" },
 			success: function (res) {
+				// 如果有登录信息,但是发起请求返回请登录,说明登录过期,跳转登录页面 TODO
 				success(res)
 			},
 			fail: function (res) {
