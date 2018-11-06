@@ -214,7 +214,7 @@ Page({
 				// 缓存登录信息
 				getApp().cacheHeader(JSON.stringify(resData.data.resHeadDto));
 				// 跳转登录成功页面
-				wx.navigateTo({
+				wx.redirectTo({
 					url: '../index/index',
 				})
 			})

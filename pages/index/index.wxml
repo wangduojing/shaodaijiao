@@ -33,7 +33,7 @@
         </view>
     </view>
     <view class='menutit'>
-        <view>进行中
+        <view bindtap='network_request'>进行中
             <text> ING</text>
         </view>
         <view bindtap='jump_upImage'>事项</view>

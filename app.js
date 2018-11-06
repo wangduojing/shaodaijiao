@@ -16,8 +16,9 @@ App({
         // var logs = wx.getStorageSync('logs') || []
         // logs.unshift(Date.now())
         // wx.setStorageSync('logs', logs)
+		// wx.clearStorage();
 		if (this.getHeader() == null || this.getHeader() == ''){
-			this.cacheHeader("{'channelName': '小程序','deviceId': '', 'accessToken': '', 'clientType': '3', 'appEdition': '111', 'channelId': '', 'account': ''}");
+			this.cacheHeader("{\"channelName\": \"小程序\",\"deviceId\": \"\", \"accessToken\": \"\", \"clientType\": \"3\", \"appEdition\": \"111\", \"channelId\": \"\", \"account\": \"\"}");
 		}
         // 登录
         wx.login({
@@ -82,8 +83,8 @@ App({
 	getHeader: function () {
 		return wx.getStorageSync(this.globalData.headerKey);
 	},
-	// 发起请求封装
-	httpsRequest: function (url, params, functinName) {
+	// 发起同步网络请求封装
+	httpsRequestSync: function (url, params) {
 		// 判断是否有网络
 		wx.getNetworkType({
 			success: function (res) {
@@ -116,6 +117,40 @@ App({
 					returnData = "这里还不知道怎么处理";
 				}
 			})
+		})
+	},
+	// 发起异步网络请求封装
+	httpsRequest: function (url, params, success) {
+		// 判断是否有网络
+		wx.getNetworkType({
+			success: function (res) {
+				if ('none' == res.networkType) {
+					wx.showToast({
+						title: '跳转无网络页面',
+					})
+					return;
+				}
+			},
+		})
+		var returnData = null;
+		var header = this.getHeader();
+		url = this.globalData.requestUrl + url;//上面链接拼接后台给的请求地址url
+		wx.request({//请求格式
+			url: url,
+			data: { 'json': "{'reqHeader':" + header + ",'reqBodyDto':" + params + "}" },
+			method: 'POST',
+			responseType: 'text',
+			dataType: 'json',
+			header: { "Content-Type": "application/x-www-form-urlencoded" },
+			success: function (res) {
+				success(res)
+			},
+			fail: function (res) {
+
+			},
+			complete: function () {
+				returnData = "这里还不知道怎么处理";
+			}
 		})
 	}
 })

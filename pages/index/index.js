@@ -92,5 +92,12 @@ Page({
 		wx.navigateTo({
 			url: '../image/image',
 		})
+	},
+	network_request: function () {
+		var request = require('../../utils/request')
+		request.publish_contactlist('{}', function (res){
+			// res为返回的数据
+			console.log(res)
+		})
 	}
 })
