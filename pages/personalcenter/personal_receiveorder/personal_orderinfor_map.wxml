@@ -1,0 +1,117 @@
+<!--pages/personalcenter/personal_receiveorder/personal_orderinfor_map.wxml-->
+<!-- 本页面适用于这些页面: 送件中  待取件 共2种状态-->
+<view class='map'>
+    <map id="myMap" style="width: 100%; height: 568rpx; z-index: 0;" zIndex="0" longitude="116.313972" latitude="39.980014" scale='16' polyline="{{polyline}}" include-points='{{markers}}' markers='{{markers}}'>
+        <button bindtap="driving" style='width:300rpx;;background:#eee;'>路线规划</button>
+        <view class='distance'>全程约：{{distanceLength}}公里</view>
+    </map>
+</view>
+<cover-view class='contain'>
+    <cover-view class='common-row information'>
+        <cover-view class='number'>
+            <cover-view>订单编号：23565656656666</cover-view>
+            <cover-view class='mark'>急捎</cover-view>
+        </cover-view>
+    </cover-view>
+    <cover-view class='common-row'>
+        <cover-view class='address'>
+            <cover-view class='addtitle'>
+                <cover-view class='persondot'></cover-view>
+                <cover-view>发件人信息</cover-view>
+            </cover-view>
+            <cover-view class='address-infor'>
+                <cover-view>张立辉 1355412124</cover-view>
+                <cover-view>{{startAddress}}</cover-view>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+    <cover-view class='common-row'>
+        <cover-view class='address'>
+            <cover-view class='addtitle receive'>
+                <cover-view class='persondot'></cover-view>
+                <cover-view>收件人信息</cover-view>
+            </cover-view>
+            <cover-view class='address-infor'>
+                <cover-view>{{endAddress}}</cover-view>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+    <!-- 急捎的价格布局开始 -->
+    <cover-view class='common-row fee'>
+        <cover-view class='fee-money'>
+            200.00元
+        </cover-view>
+        <cover-view class='fee-infor'>
+            （运费：22.00元 感谢费：2.00元）
+        </cover-view>
+    </cover-view>
+    <!-- 急捎的价格布局开始 -->
+    <cover-view class='common-row time'>
+        <cover-view class='send-time'>预约取件时间段：2017/12/22 22：20-22：30
+        </cover-view>
+        <cover-view class='send-time'>最晚送达时间：2017/12/22 22：22
+        </cover-view>
+    </cover-view>
+    <!-- 普捎的价格布局开始 -->
+    <!-- <cover-view class='common-row fee'>
+		<cover-view class='fee-money'>
+			我的报价：200.00元
+		</cover-view>
+		<cover-view class='fee-time'>
+			报价时间：2017/12/22 22：22
+		</cover-view>
+	</cover-view> -->
+    <!-- 普捎的价格布局结束 -->
+    <cover-view class='common-row progress'>
+        <cover-view>订单进度</cover-view>
+        <cover-view class='iconfont icon-xiala1' bindtap='lookprogersstime'></cover-view>
+        <cover-view class='textright'>我要发货</cover-view>
+    </cover-view>
+    <cover-view class="common-row progerss-time {{progersstime ? 'hide' : 'show'}}">
+        <cover-view>下单时间：2017-12-22 22：22：22</cover-view>
+        <cover-view>下单时间：2017-12-22 22：22：22</cover-view>
+        <cover-view>下单时间：2017-12-22 22：22：22</cover-view>
+    </cover-view>
+    <cover-view class='common-row progress goods-infortit'>
+        <cover-view>物品信息</cover-view>
+        <cover-view class='iconfont icon-xiala1' bindtap='lookgoodsinfor'></cover-view>
+    </cover-view>
+    <cover-view hidden='{{goodsinfor ? true : false}}' class='common-row goods-infor'>
+        <cover-view>
+            <cover-view>类型：</cover-view>文件/证件</cover-view>
+        <cover-view>
+            <cover-view>名称：</cover-view>文件</cover-view>
+        <cover-view>
+            <cover-view>价值：</cover-view>50元以下</cover-view>
+        <cover-view>
+            <cover-view>重量：</cover-view>5公斤以下</cover-view>
+        <cover-view class='photo'>
+            <cover-view>照片：</cover-view>
+            <cover-image></cover-image>
+            <cover-image></cover-image>
+            <cover-image></cover-image>
+        </cover-view>
+        <cover-view>
+            <cover-view>配送工具：</cover-view> 不限</cover-view>
+        <cover-view>
+            <cover-view>悄悄话：</cover-view> 很着急，请快点接单</cover-view>
+    </cover-view>
+    <cover-view class='common-row personal-infor'>
+        <cover-view class='infor'>
+            <cover-image class='personal-photo' src='http://www.dlada56.com/images/logo.png'></cover-image>
+            <cover-view>
+                <cover-view>李玉华</cover-view>
+                <cover-image class='iconfont icon-shimingrenzheng'></cover-image>
+            </cover-view>
+            <cover-view class='iconfont icon-dianhua'></cover-view>
+        </cover-view>
+        <!-- <cover-view class='infor '>
+			
+		</cover-view> -->
+    </cover-view>
+    <cover-view class='common-row get-number'>
+        <cover-view>取货码：q12345674</cover-view>
+        <!--或者收货码-->
+        <cover-view class='sent-number'>发送验证码</cover-view>
+    </cover-view>
+</cover-view>
