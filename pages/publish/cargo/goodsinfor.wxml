@@ -49,6 +49,7 @@
     <text>物品照片</text>  
 	<view class='click-onload'>
 		<image src='http://www.ada56.com/images/load.png'></image>
+		<image src='http://www.ada56.com/images/load.png'></image>
 	</view>
 </view>
 <view class='submit'>

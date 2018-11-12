@@ -177,6 +177,7 @@
 .goods-photo image{
 	width: 115rpx;
 	height: 79rpx;
+	margin-left: 20rpx;
 }
 
 .submit {
